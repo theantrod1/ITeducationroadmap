@@ -23,4 +23,4 @@ Here is the list that was formulated using Google Gemini that will be used to gu
 
 
 March 13, 2026
-Although I did have knowledge on Network Hardware to a fairly basic degree from completing the Google IT Support certication, I also would not claim to be able to work my way around different machines. So I am going to get started learning truly about Network Hardware to a deeper level starting today and begin checking marks off the list and start becoming a true professional in the field! 
+This space serves as my daily learning log. I'll be briefly documenting the concepts I tackle and the resources I find most helpful. If you'd like to see my detailed progress, the main branch contains individual files for each topic. Each file breaks down when I started learning a specific concept, along with real-time reflections and deep dives into the material.
