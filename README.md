@@ -22,5 +22,5 @@ Here is the list that was formulated using Google Gemini that will be used to gu
 -Writing Basic Automation Scripts (Bash)
 
 
-March 13, 2026
+# March 13, 2026
 This space serves as my daily learning log. I'll be briefly documenting the concepts I tackle and the resources I find most helpful. If you'd like to see my detailed progress, the main branch contains individual files for each topic. Each file breaks down when I started learning a specific concept, along with real-time reflections and deep dives into the material.
