@@ -1,7 +1,7 @@
 # ITeducationroadmap
 This repo tracks my transition into IT. I used AI to design a roadmap of core concepts to ensure I'm focusing on the right areas. I'm highly motivated to turn theoretical knowledge into practical, hands-on skills. Always learning, coachable, and completely open to feedback!
 
-Here is the list that was formulated using Google Gemini that will be used to guide me in the pursuit of more knowledge in IT:
+Here is the list (in order) that was formulated using Google Gemini that will be used to guide me in the pursuit of more knowledge in IT:
 
 -Network Hardware
 -Making Network Cables
