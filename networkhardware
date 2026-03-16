@@ -1,5 +1,16 @@
 #NetworkHardware
 
 March 16, 2026
-Although I already have prior knowledge on Network Hardware after completion of the Google IT Support Certificate, I am going to stick with the list the thta was provided to me by Gemini
-and learn and every concept. 
+Although I already have prior knowledge on Network Hardware after completion of the Google IT Support Certificate, I am going to stick with the list the that was provided to me by 
+Gemini and learn every concept to become very adept in the core fundamentals of IT.
+In this file portion I'll discuss the most critical devices necessary for network connection such as modem, routers, switches, etc.:
+
+Hub:
+Considered a "dumb" machine, hubs share data across networks and 
+
+Modem: 
+Short for "Modulator Demodulator", the modem is responsible for taking ISP provided analog signals that are deliverd through cables, fiber optics, or phone lines and
+converting it into digital data that the computer/machine can understand.
+Demodulation occurs when data is going from ISP to Device (Turning analog signals into 1s and 0). Modulation would be from the device back to the ISP (Turning 1s and 0s back
+to analog data).
+
