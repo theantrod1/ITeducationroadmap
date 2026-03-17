@@ -26,6 +26,13 @@ a switch can create immediate expansion of internet access.
 What makes switches smart as opposed to something like a hub (which will be discussed later) is that switches maintained the ability to discern exactly what device on
 the network is making the request for data. They can do this by taking advantage of a MAC address table (a unique identifier for the device itself despite the router/IP).
 The switch knows which device is plugged into which port making collision impossible and data transmission more efficient.
+Furthermore, there are different types of switches:
+-Unmanaged Switches: No further configuration available/necessary. It's very simple to setup and doesn't require much active management because what you see is what you
+get. However, it does come with some security drawbacks in the way that anyone who plugs into the switch is instantly connected to the network. These are typically used
+for smaller networks such as in a home or small business.
+-Managed Switches: Require configuration from a technician and can be used to create VLANs. It has a more difficult setup than an unmanaged switch but is much more secure
+due to the ability to lock the switch down so only specific ports can access the network. These are more often than not used for large businesses or data centers.
+
 
 Hub:
 Hubs work similarly to switches but are considered "dumb" because they, rather than being able to identify where the original request is coming from on a network, send data to
@@ -52,8 +59,8 @@ Network Interface Card (NIC):
 NIC is the hardware connecting a device to a network. NIC translates computers' digital data into electrical signals/radio waves. It sits between your device and the network.
 NICs also have MAC addresses burned into them. All MAC addresses are unique and it's how network distinguish one device from another.
 There are 2 types of NICs:
-Wired NIC- Have an ethernet port and can range in speeds from 100Mbps - 10 gigabits
-Wireless NIC- Handle Wifi typically built into the motherboard or can also come in a USB adapter
+-Wired NIC: Have an ethernet port and can range in speeds from 100Mbps - 10 gigabits
+-Wireless NIC: Handle Wifi typically built into the motherboard or can also come in a USB adapter
 
 Bridge:
 Connects different network segments (Such as NIC bridges device to the network)
