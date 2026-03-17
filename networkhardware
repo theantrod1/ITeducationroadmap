@@ -5,12 +5,59 @@ Although I already have prior knowledge on Network Hardware after completion of 
 Gemini and learn every concept to become very adept in the core fundamentals of IT.
 In this file portion I'll discuss the most critical devices necessary for network connection such as modem, routers, switches, etc.:
 
-Hub:
-Considered a "dumb" machine, hubs share data across networks and 
-
 Modem: 
 Short for "Modulator Demodulator", the modem is responsible for taking ISP provided analog signals that are deliverd through cables, fiber optics, or phone lines and
 converting it into digital data that the computer/machine can understand.
 Demodulation occurs when data is going from ISP to Device (Turning analog signals into 1s and 0). Modulation would be from the device back to the ISP (Turning 1s and 0s back
 to analog data).
+Every device on a network relies on the modem to connect to the internet. Without a modem there would be no way to connect to the internet.
+
+Router:
+The job of the router is to direct traffic to all devices throughout the network. The router takes the signal from the modem and shares with all the devices. The router can grant
+internet to all devices on a network at the same time. The way it does this is by creating a Local Area Network (LAN). In the LAN, the router assigns each device on the LAN a
+local IP address; Typically something along the lines of 192.168.1.0 as an example. 
+When devices such as a laptop requesting to watch a YouTube video or a phone checking an email, The router serves as the traffic police managing the flow of all the traffic.
+Routers use routing tables to figure out the quickest path for data transmission along with Network Address Translation (NAT) to give all devices on a network one shared,
+public IP address from your ISP.
+
+Switch:
+Connects multiple devices within a network. A router generally doesn't have many ethernet ports (typically with around 4 or 5). However, if ever more are needed,
+a switch can create immediate expansion of internet access.
+What makes switches smart as opposed to something like a hub (which will be discussed later) is that switches maintained the ability to discern exactly what device on
+the network is making the request for data. They can do this by taking advantage of a MAC address table (a unique identifier for the device itself despite the router/IP).
+The switch knows which device is plugged into which port making collision impossible and data transmission more efficient.
+
+Hub:
+Hubs work similarly to switches but are considered "dumb" because they, rather than being able to identify where the original request is coming from on a network, send data to
+all the devices on that local network. They also have half-duplex transmission systems, meaning that they can NOT send and receive data simultaneously. 
+So if ever 2 devices were to be sending data at the same time, the data would collide and become corrupt, requiring that the original sender send the data again. This method
+also is very wasteful of bandwidth considering that all the devices that the data wasn't meant for just trash the data.
+
+Access Point:
+Access Points, or APs, create WiFi coverage by using an ethernet cable to connect to the router, and then broadcasts a WiFi signal, allowing wireless devices connect
+to the network. Its essentially a bridge between a wired network and wireless devices. Range for Access Points is typically within 100-300 feet indoors (walls and obstacles
+can affect this).
+Access points don't assign IP addresses to any devices, they just function as an extension/provide wireless access to an existing network.
+
+Firewall:
+A firewall functions as a security guard for a network, sitting inbetween a network and the internet. They decide what data can come into the network. All data comes in
+the form of packets. Packets all have data such as: where it's coming from, where it's going, which port it's using, and what protocol it's using.
+Firewalls essentially set rules determining what guidelines a packet must follow in order to go through. If a packet meets all the requirements, it will pass through. If a is
+suspicious or if it matches block rules, it will be stopped immediately. Things such as renowned malicious IPs, unauthorized access attempts, or strange port scanning activity
+all get stopped and never reach any of the devices on a network.
+Firewalls can be hardware or software. Hardware firewalls are placed right inbetween modems and routers to protect your entire network. Software is run on computers
+individually and are run to determine what apps can and cannot do on a network. 
+
+Network Interface Card (NIC):
+NIC is the hardware connecting a device to a network. NIC translates computers' digital data into electrical signals/radio waves. It sits between your device and the network.
+NICs also have MAC addresses burned into them. All MAC addresses are unique and it's how network distinguish one device from another.
+There are 2 types of NICs:
+Wired NIC- Have an ethernet port and can range in speeds from 100Mbps - 10 gigabits
+Wireless NIC- Handle Wifi typically built into the motherboard or can also come in a USB adapter
+
+Bridge:
+Connects different network segments (Such as NIC bridges device to the network)
+
+Gateway:
+Connect different network types (Such as a home router connecting a network to the internet)
 
