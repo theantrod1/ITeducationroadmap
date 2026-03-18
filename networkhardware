@@ -36,9 +36,10 @@ for smaller networks such as in a home or small business.
 -Managed Switches: Require configuration from a technician and can be used to create VLANs. It has a more difficult setup than an unmanaged switch but is much more secure
 due to the ability to lock the switch down so only specific ports can access the network. These are more often than not used for large businesses or data centers.
 
-There are also Modular Switches that are almost all managed and rather than coming as one pre-built machine, it's essentially an empty metal frame (Chassis). The Chassis
+-Modular Switches: Almost all managed and rather than coming as one pre-built machine, it's essentially an empty metal frame (Chassis). The Chassis
 is powered by the Supervisor Engine. In the frame it has empty slots that you can slide line cards (modules) to customize it. This is a good option for a growing company 
 as a company may need 20 ports today, but in 2 years may need 100.
+-Storage Area Network (SAN) Switches: Used to connect servers to giant Storage Arrays.
 
 
 Hub:
@@ -92,6 +93,11 @@ Machine built to sustain the heavy processing required for a large amount of VPN
 Power Distribution Unit (PDU):
 Heavy-duty, industrial-strength power strip that was created specifically for IT equipment. PDUs sit inside Server Racks to provide electricity to several servers, switches,
 routers, etc. at once.
+
+
+Out-of-Band Management:
+A backdoor form of communication with your hardware. For example, if a network crashes and you must get access to the router, you need a way to communicate with the router
+that doesn't depend on the network, considering that it is down.
 
 
 All the information here was learned through YouTube videos, in particular by Professor Messer's "Network Devices - CompTIA A+ 220-1101 - 2.2" video. I reinforced the knowledge
