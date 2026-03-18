@@ -35,9 +35,10 @@ get. However, it does come with some security drawbacks in the way that anyone w
 for smaller networks such as in a home or small business.
 -Managed Switches: Require configuration from a technician and can be used to create VLANs. It has a more difficult setup than an unmanaged switch but is much more secure
 due to the ability to lock the switch down so only specific ports can access the network. These are more often than not used for large businesses or data centers.
-There are also Modular Switches that are almost all managed and rather than coming as one pre-built machine, it's essentially an empty metal frame (Chassis). In the frame
-it has empty slots that you can slide line cards (modules) to customize it. This is a good option for a growing company as a company may need 20 ports today, but in 2 years
-may need 100.
+
+There are also Modular Switches that are almost all managed and rather than coming as one pre-built machine, it's essentially an empty metal frame (Chassis). The Chassis
+is powered by the Supervisor Engine. In the frame it has empty slots that you can slide line cards (modules) to customize it. This is a good option for a growing company 
+as a company may need 20 ports today, but in 2 years may need 100.
 
 
 Hub:
