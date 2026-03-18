@@ -74,11 +74,24 @@ There are 2 types of NICs:
 
 
 Bridge:
-Connects different network segments (Such as NIC bridges device to the network)
+Connects different network segments (Such as NIC bridges device to the network).
 
 
 Gateway:
-Connect different network types (Such as a home router connecting a network to the internet)
+Connect different network types (Such as a home router connecting a network to the internet).
+
+
+Media Converter:
+Responsible for connecting different types of cables such as copper cables and fiber optic cables.
+
+
+VPN Concentrator:
+Machine built to sustain the heavy processing required for a large amount of VPN tunnels.
+
+
+Power Distribution Unit (PDU):
+Heavy-duty, industrial-strength power strip that was created specifically for IT equipment. PDUs sit inside Server Racks to provide electricity to several servers, switches,
+routers, etc. at once.
 
 
 All the information here was learned through YouTube videos, in particular by Professor Messer's "Network Devices - CompTIA A+ 220-1101 - 2.2" video. I reinforced the knowledge
