@@ -20,7 +20,7 @@ When devices such as a laptop requesting to watch a YouTube video or a phone che
 Routers use routing tables to figure out the quickest path for data transmission along with Network Address Translation (NAT) to give all devices on a network one shared,
 public IP address from your ISP.
 
-Switch:
+### Switch:
 Connects multiple devices within a network. A router generally doesn't have many ethernet ports (typically with around 4 or 5). However, if ever more are needed,
 a switch can create immediate expansion of internet access.
 What makes switches smart as opposed to something like a hub (which will be discussed later) is that switches maintained the ability to discern exactly what device on
@@ -33,8 +33,10 @@ for smaller networks such as in a home or small business.
 -Managed Switches: Require configuration from a technician and can be used to create VLANs. It has a more difficult setup than an unmanaged switch but is much more secure
 due to the ability to lock the switch down so only specific ports can access the network. These are more often than not used for large businesses or data centers.
 
+There are also 
 
-Hub:
+
+### Hub:
 Hubs work similarly to switches but are considered "dumb" because they, rather than being able to identify where the original request is coming from on a network, send data to
 all the devices on that local network. They also have half-duplex transmission systems, meaning that they can NOT send and receive data simultaneously. 
 So if ever 2 devices were to be sending data at the same time, the data would collide and become corrupt, requiring that the original sender send the data again. This method
@@ -68,5 +70,6 @@ Connects different network segments (Such as NIC bridges device to the network)
 Gateway:
 Connect different network types (Such as a home router connecting a network to the internet)
 
-All the information here was learned through YouTube videos, particularly by Professor Messer's "Network Devices - CompTIA A+ 220-1101 - 2.2" video. I reinforced the knowledge
+
+All the information here was learned through YouTube videos, in particular by Professor Messer's "Network Devices - CompTIA A+ 220-1101 - 2.2" video. I reinforced the knowledge
 by creating and taking quizzes using Gemini generated quizzes.
