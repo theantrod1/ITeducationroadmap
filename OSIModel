@@ -1,1 +1,24 @@
 #OSI Model
+
+March 19, 2026
+
+Like with the Networking Hardware subtopic, prior to this I've been exposed to the OSI Model in the Google IT Support Course. However, to get an even deeper understanding of
+the concepts within IT, I will continue my education on all of these topics within in the field until I become adept enough to the point where I can answer questions as if
+I was asked what my own name is.
+
+
+OSI Model: The model is a 7 layer framework that depicts the roadmap for how data is transmitted from one machine through to another. By breaking the process down into 7 layers
+it makes it simpler on IT Professionals to detect something when it goes wrong, furthermore, where it went wrong.
+The 7 Layers are as follows:
+7. Application
+6. Presentation
+5. Session
+4. Transport
+3. Network
+2. Data Link
+1. Physical
+
+When sending a request the model woks from the top to the bottom. When receiving a request, the model works from bottom to top.
+
+The way each of the layers functions is as follows:
+1. Physical Layer-
