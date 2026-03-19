@@ -21,4 +21,12 @@ The 7 Layers are as follows:
 When sending a request the model woks from the top to the bottom. When receiving a request, the model works from bottom to top.
 
 The way each of the layers functions is as follows:
-1. Physical Layer-
+1. Physical Layer- The Physical Layer is composed of all of the hardware components of data transfering taking into consideration things like cables, Wi-Fi Signals, etc..
+It handles the actual physical transmission of data with wires or wireless, moving the raw 1s and 0s between devices.
+If you remove this layer, data would not be able to move between devices.
+
+2. Data Link Layer- Data link is responsible for the transmission of data for devices on the same network. Devices in this layer are machines such as switches. MAC addresses
+are also seen in this layer. The bits/packets that are received from the 
+If you remove the Data Link Layer, the devices on the network would have no way of identifying one another.
+
+3. Network Layer- This layer is 
