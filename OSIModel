@@ -44,4 +44,7 @@ Without this layer, the model would be able to identify the network of the Desti
 It's as if you are sedning a package to an apartment but not leaving Unit Number.
 
 5. Session Layer- This layer is session to establish a connection between devices, maintains the session open, and ends a session to terminate the connection between devices.
-This layer manages whether the connection is Half-Duplex or Full-Duplex and also manages Checkpointing.
+This layer manages whether the connection is Half-Duplex or Full-Duplex and also manages Checkpointing. Checkpointing essentially synchronizes the data on both devices to
+make sure that if a connection fails or falls off, it can resume the data at set "Checkpoints". 
+Without this layer we would not be able to establish a connection between the sending and receiving device, as well as if at any point connection is lost, we would have to
+restart the process.
