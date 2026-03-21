@@ -35,4 +35,13 @@ to identify where another network is exactly, and intelligently uses a Routing T
 Fragmentation, breaking down a packet into smaller chunks to make sure it gets sent properly.
 Without the Network Layer, packets/data would have no way of being transmitted between networks as they wouldn't have the navigational tools to move across.
 
-4. Transport Layer-
+4. Transport Layer- The Transport Layer is responsible for making sure that all the transmitted data is delivered correctly. They ensure Segments/Datagrams arrive in the order
+they were sent. The precision of the data depends on the protocol, whether its TCP (Transmission Control Protocol) or UDP (User Datagram Protocol). TCP ensures that the SEGMENTS
+arrives perfectly, primarily focuses on sequencing and that no segments are lost. While UDP is more tailored for speed and doesn't worry too much if a few DATAGRAMS are lost in
+transmission. Once a Segment/Datagram reaches a device, this layer also uses Port Numbers to be able to identify exactly where to send all the information. This is paired with the
+IP address and would look something like: 192.161.1.0:80.
+Without this layer, the model would be able to identify the network of the Destination, but it wouldn't be able to locate exactly where to send that information once it gets there.
+It's as if you are sedning a package to an apartment but not leaving Unit Number.
+
+5. Session Layer- This layer is session to establish a connection between devices, maintains the session open, and ends a session to terminate the connection between devices.
+This layer manages whether the connection is Half-Duplex or Full-Duplex and also manages Checkpointing.
