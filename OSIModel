@@ -29,4 +29,10 @@ If you remove this layer, data would not be able to move between devices.
 are also seen in this layer. The bits/packets that are received from the 
 If you remove the Data Link Layer, the devices on the network would have no way of identifying one another.
 
-3. Network Layer- This layer is 
+3. Network Layer- This layer is in charge of making sure that networks can communicate with one another. The machines in this layer are routers and this is where you start to
+see the use of IP addresses. Network Layer sees Packets encapsulated by Frames. This layer uses IP addresses (usually assigned by router but can also be static) 
+to identify where another network is exactly, and intelligently uses a Routing Table to figure out to how to most efficiently transmit the packets. This layer can also perform
+Fragmentation, breaking down a packet into smaller chunks to make sure it gets sent properly.
+Without the Network Layer, packets/data would have no way of being transmitted between networks as they wouldn't have the navigational tools to move across.
+
+4. Transport Layer-
