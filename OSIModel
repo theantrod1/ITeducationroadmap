@@ -30,8 +30,8 @@ If you remove this layer, there'd be no way to transfer bits into electric signa
 are also seen in this layer. The process of using MAC addresses to identify different devices locally is known as Physical Addressing. This layer also handles Framing, where it 
 packages the data into Frames with a header and a trailer to ensure error-free transmission across the local physical link.
 This layer is also responsible for error detection in frames by adding a trailer to each frame to perform CRC (Cyclic Redundancy Check) to make sure that data wasn't damaged
-during transmission. The Data Link Layer is divided into 2 sections: Media Access Control (MAC) which handles all the hardware and physical components, and the Logical Link Control
-(LLC) which serves as the bridge between the hardware and the software.
+during transmission. The Data Link Layer is divided into 2 sections: Media Access Control (MAC) which handles all the hardware and physical components and making sure that devices
+don't collide when speaking at the same time over a wire, and the Logical Link Control (LLC) which serves as the bridge between the hardware and the software.
 If you remove the Data Link Layer, the devices on the network would have no way of identifying one another.
 
 3. Network Layer- This layer is in charge of making sure that networks can communicate with one another. The machines in this layer are routers and this is where you start to
