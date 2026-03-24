@@ -48,6 +48,7 @@ transmission. Once a Segment/Datagram reaches a device, this layer also uses Por
 IP address and would look something like: 192.161.1.0:80.
 This layer is also responsible for segmentation and making sure that segments are delivered through error checking. Along with this, the Transport Layer is also in charge of flow
 control and making sure that there is never too much data being sent at one time to not overwhelm the receiver.
+The Transport Layer ensures that delivery is reliable by sending and receiving acknowledgements (ACKs)
 Without this layer, the model would be able to identify the network of the Destination, but it wouldn't be able to locate exactly where to send that information once it gets there.
 It's as if you are sedning a package to an apartment but not leaving Unit Number.
 
