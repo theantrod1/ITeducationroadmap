@@ -31,14 +31,16 @@ are also seen in this layer. The process of using MAC addresses to identify diff
 packages the data into Frames with a header and a trailer to ensure error-free transmission across the local physical link.
 This layer is also responsible for error detection in frames by adding a trailer to each frame to perform CRC (Cyclic Redundancy Check) to make sure that data wasn't damaged
 during transmission. The Data Link Layer is divided into 2 sections: Media Access Control (MAC) which handles all the hardware and physical components and making sure that devices
-don't collide when speaking at the same time over a wire, and the Logical Link Control (LLC) which serves as the bridge between the hardware and the software.
+don't collide when speaking at the same time over a wire, and the Logical Link Control (LLC) which serves as the bridge between the hardware and the software by analyzing which
+network protocol is being used and providing a software interface, acting as a bridge that allows multiple protocols (IPv4, IPv6) to share the same hardware link.
 If you remove the Data Link Layer, the devices on the network would have no way of identifying one another.
 
 3. Network Layer- This layer is in charge of making sure that networks can communicate with one another. The machines in this layer are routers and this is where you start to
 see the use of IP addresses. Network Layer sees Packets encapsulated by Frames. This layer uses IP addresses (usually assigned by router but can also be static) 
 to identify where another network is exactly, and intelligently uses a Routing Table to figure out to how to most efficiently transmit the packets. It uses "Packet Switching" to be
 able to move packets inbetween networks.
-This layer can also perform Fragmentation, breaking down a packet into smaller chunks to make sure it gets sent properly. 
+This layer can also perform Fragmentation, breaking down a packet into smaller chunks to make sure it gets sent properly.
+Routers build a new Frame for every different physical link they cross.
 Without the Network Layer, packets/data would have no way of being transmitted between networks as they wouldn't have the navigational tools to move across.
 
 4. Transport Layer- The Transport Layer is responsible for making sure that all the transmitted data is delivered correctly. They ensure Segments/Datagrams arrive in the order
@@ -55,6 +57,7 @@ It's as if you are sedning a package to an apartment but not leaving Unit Number
 5. Session Layer- This layer is session to establish a connection between devices, maintains the session open, and ends a session to terminate the connection between devices.
 This layer manages whether the connection is Half-Duplex or Full-Duplex and also manages Checkpointing. Checkpointing essentially synchronizes the data on both devices to
 make sure that if a connection fails or falls off, it can resume the data at set "Checkpoints". 
+This layer also serves as a "Dialogue Manager" in the OSI Model by managing communication between applications.
 Without this layer we would not be able to establish a connection between the sending and receiving device, as well as if at any point connection is lost, we would have to
 restart the process.
 
