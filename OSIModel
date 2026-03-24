@@ -23,16 +23,22 @@ When sending a request the model woks from the top to the bottom. When receiving
 The way each of the layers functions is as follows:
 1. Physical Layer- The Physical Layer is composed of all of the hardware components of data transfering taking into consideration things like cables, Wi-Fi Signals, etc..
 It handles the actual physical transmission of data with wires or wireless, moving the raw 1s and 0s between devices.
-If you remove this layer, data would not be able to move between devices.
+This layer handles Bit Synchronization, making sure that all devices are reading bits at the same speed.
+If you remove this layer, there'd be no way to transfer bits into electric signals.
 
 2. Data Link Layer- Data link is responsible for the transmission of data for devices on the same network. Devices in this layer are machines such as switches. MAC addresses
-are also seen in this layer. The bits/packets that are received from the 
+are also seen in this layer. The process of using MAC addresses to identify different devices locally is known as Physical Addressing. This layer also handles Framing, where it 
+packages the data into Frames with a header and a trailer to ensure error-free transmission across the local physical link.
+This layer is also responsible for error detection in frames by adding a trailer to each frame to perform CRC (Cyclic Redundancy Check) to make sure that data wasn't damaged
+during transmission. The Data Link Layer is divided into 2 sections: Media Access Control (MAC) which handles all the hardware and physical components, and the Logical Link Control
+(LLC) which serves as the bridge between the hardware and the software.
 If you remove the Data Link Layer, the devices on the network would have no way of identifying one another.
 
 3. Network Layer- This layer is in charge of making sure that networks can communicate with one another. The machines in this layer are routers and this is where you start to
 see the use of IP addresses. Network Layer sees Packets encapsulated by Frames. This layer uses IP addresses (usually assigned by router but can also be static) 
-to identify where another network is exactly, and intelligently uses a Routing Table to figure out to how to most efficiently transmit the packets. This layer can also perform
-Fragmentation, breaking down a packet into smaller chunks to make sure it gets sent properly.
+to identify where another network is exactly, and intelligently uses a Routing Table to figure out to how to most efficiently transmit the packets. It uses "Packet Switching" to be
+able to move packets inbetween networks.
+This layer can also perform Fragmentation, breaking down a packet into smaller chunks to make sure it gets sent properly. 
 Without the Network Layer, packets/data would have no way of being transmitted between networks as they wouldn't have the navigational tools to move across.
 
 4. Transport Layer- The Transport Layer is responsible for making sure that all the transmitted data is delivered correctly. They ensure Segments/Datagrams arrive in the order
@@ -40,6 +46,8 @@ they were sent. The precision of the data depends on the protocol, whether its T
 arrives perfectly, primarily focuses on sequencing and that no segments are lost. While UDP is more tailored for speed and doesn't worry too much if a few DATAGRAMS are lost in
 transmission. Once a Segment/Datagram reaches a device, this layer also uses Port Numbers to be able to identify exactly where to send all the information. This is paired with the
 IP address and would look something like: 192.161.1.0:80.
+This layer is also responsible for segmentation and making sure that segments are delivered through error checking. Along with this, the Transport Layer is also in charge of flow
+control and making sure that there is never too much data being sent at one time to not overwhelm the receiver.
 Without this layer, the model would be able to identify the network of the Destination, but it wouldn't be able to locate exactly where to send that information once it gets there.
 It's as if you are sedning a package to an apartment but not leaving Unit Number.
 
@@ -48,3 +56,22 @@ This layer manages whether the connection is Half-Duplex or Full-Duplex and also
 make sure that if a connection fails or falls off, it can resume the data at set "Checkpoints". 
 Without this layer we would not be able to establish a connection between the sending and receiving device, as well as if at any point connection is lost, we would have to
 restart the process.
+
+6. Presentation Layer- The Presentation Layer is in charge of formatting all the raw bits and data in a way that the receiving device/application will understand as well as
+being able to encrypt and decrypt the data. The data is typically encrypted using the cryptographic protocols SSL/TLS. Essentially before the data moves down to Session Layer 5, 
+the data is scrambled and makes readable plaintext into ciphertext so this way even if someone can intercept your WiFi, the data is completely unintelligible.
+This layer also cotnrols translating, to convert data between formats. For example, ASCII into EBCDIC, or handling files such as JPEG.
+Without this layer it's as though the 2 communicating applications are speaking 2 different languages on a phone call.
+
+7. Application Layer- The Application Layer is the part of the OSI Model that the user actually interacts with. It holds a set of protocols such as the SMTP 
+(Simple Message Transfer Protocol) or HTTP (Hyper-Text Transfer Protocol) that is the actual protocols used to send, receive, request, or transfer data.
+Without this layer the user would have no way of interacting with the model whatsoever. It'd be as if your sitting in a car that's turned on with no gas pedal nor steering wheel.
+
+
+Encapsulation: This is the process of wrapping PDUs (Protocol Data Unit) in a new header as data moves down the OSI Model.
+
+Decapsulation: Process of UNwrapping the PDUs as it moves up the OSI Model.
+
+Logical Addressing: Using IP addresses to identify devices outside of local network.
+
+Physical Addressing: Using MAC addresses to identify devices on the same local network.
