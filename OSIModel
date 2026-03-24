@@ -79,3 +79,5 @@ Decapsulation: Process of UNwrapping the PDUs as it moves up the OSI Model.
 Logical Addressing: Using IP addresses to identify devices outside of local network.
 
 Physical Addressing: Using MAC addresses to identify devices on the same local network.
+
+Windowing: This is a TCP flow control tactic that has the receiver let the sender know how much data it can send before it has to stop and wait to receive an "ACK".
