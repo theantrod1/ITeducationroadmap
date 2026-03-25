@@ -7,3 +7,8 @@ done more research than most other topics on the list prior to going down the ch
 everything that I can about IP addresses and their role in the IT field. 
 
 IP Address: This is the logical unique identifier for a certain network/device on a network.
+
+There are 2 main types of IP Addresses:
+
+-IPv4: A 32-bit string of numbers with 4 sets of octets. This is the old standard for IP addresses as we have literally run out of available IPs on this standard due to poor
+management and unpredictability of the internet becoming as big as it did. A big issue with the distribution of these IPs was the use of classes.
