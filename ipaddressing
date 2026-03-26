@@ -36,6 +36,7 @@ There are 2 main types of IP Addresses:
     INSIDE the octet, stating that they only need 126 hosts (126 because ending in ".0" would be the Network ID, and ending in ".127" would be the broadcast address. Broadcast address
     is the unique address used to send data to all local devices on the network at the same time. Broadcast address is always going to be the last IP in that sepecific subnet.
 
-  -
+  
+  -IPv6: x1x28-bit hexadecimal string of characters utilizing both letters and numbers to make up the IP
   
 
