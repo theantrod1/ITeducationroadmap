@@ -6,20 +6,32 @@ For every topic on the AI Checklist I have at least some exposure to the topic a
 done more research than most other topics on the list prior to going down the checklist, but to get as proficient as possible I'm going to be taking the next 1-3 day(s) learning
 everything that I can about IP addresses and their role in the IT field. 
 
-IP Address: This is the logical unique identifier for a certain network/device on a network.
+IP Address: This is the logical unique identifier for a certain network/device on a network. All devices need an IP address to communicate and each consist of 2 parts:
+Network and Host. The network part of an IP identifies the actual network it is on (such as a gym or school). The host part defines the specific device on that network.
 
 There are 2 main types of IP Addresses:
 
--IPv4: A 32-bit string of numbers with 4 sets of octets expressed in dotted decimal notation. This is the old standard for IP addresses as we have literally run out of available 
-IPs on this standard due to poor management and unpredictability of the internet becoming as big as it did. A big issue with the distribution of these IPs was the use of classes. 
-Classes were way too rigid. Depending on the class you were in would determine the amount of IPs along with the what number IPs you'd get.
-Class A: 1-126.x.x.x | 16 Million IPs
-Class B: 128-191.0.x.x | 65 Thousand IPs
-Class C: 192-223.0.0.x | 254 IPs
-A company with, say, 300 employees would be forced into Class B, would use the 300 IPs that they needed, and the other 65 thousand IPs would go completely to waste. Later,
-engineers realized that too many IPs were being wasted, and there was a growing demand for IP addresses. So they introduced a system known as Classless Inter-Domain Routing (CIDR).
-CIDR essentially forgets classes and splits a class into exactly how many IPs a company needs by breaking it into blocks like 512 or 1024.
+  -IPv4: A 32-bit string of numbers with 4 sets of octets expressed in dotted decimal notation. This is the old standard for IP addresses as we have literally run out of available 
+    IPs on this standard due to poor management and unpredictability of the internet becoming as big as it did. A big issue with the distribution of these IPs was the use of classes. 
+    Classes were way too rigid. Depending on the class you were in would determine the amount of IPs along with the what number IPs you'd get.
+    Class A: 1-126.x.x.x | 16 Million IPs
+    Class B: 128-191.0.x.x | 65 Thousand IPs
+    Class C: 192-223.0.0.x | 254 IPs
+    A company with, say, 300 employees would be forced into Class B, would use the 300 IPs that they needed, and the other 65 thousand IPs would go completely to waste. Later,
+    engineers realized that too many IPs were being wasted, and there was a growing demand for IP addresses. So they introduced a system known as Classless Inter-Domain Routing (CIDR).
+    CIDR essentially forgets classes and splits a class into exactly how many IPs a company needs by breaking it into blocks like 512 or 1024.
 
-To try and save addresses even further, Public and Private Addresses were introduced. Basically a network would have one known, outward-facing, less secure IP address that would be
-known as the Public IP. No 2 Public IPs can ever be the same because the internet wouldn't know which device to send data to. The Public IP is what allows a network to connect to 
-the internet. 
+    To try and save addresses even further, Public and Private Addresses were introduced. Basically a network would have one known, outward-facing, less secure IP address that would be
+    known as the Public IP. No 2 Public IPs can ever be the same because the internet wouldn't know which device to send data to. The Public IP is what allows a network to connect to 
+    the internet. 
+    The Private IP is the IP of a device/host WITHIN the network. These are more secure and Private IPs do NOT have to be unique as long as they're in different networks. Private
+    IPs can NOT connect you to the internet and NAT (Network Address Translation) must occur so that the router can swap the Private IP for the Public IP, therefore allowing connection
+    to the internet.
+
+    In IPv4 the Network Part of an IP address is determined by the Subnet Mask. The subnet mask is essentially a line drawn between what is the Network vs Host Part of an IP is. 
+    Subnet Masks are written as such: "255.255.255.0". This is just an example, however in the exmaple, every octet of the IP address that is "255" is a Network portion, while
+    anything with a "0" is a host. Sometimes that number isn't 0, and is acually something like 128. Example: 255.255.255.128. In this case, the line for the host is being drawn
+    INSIDE the octet, stating that they only need 126 hosts (126 because ending in ".0" would be the Network ID, and ending in ".127" would be the broadcast address. Broadcast address
+    is the unique address used to send data to all local devices on the network at the same time. Broadcast address is always going to be the last IP in that sepecific subnet.
+  
+
