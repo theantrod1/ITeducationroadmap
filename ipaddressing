@@ -22,7 +22,7 @@ There are 2 main types of IP Addresses:
     CIDR essentially forgets classes and splits a class into exactly how many IPs a company needs by breaking it into blocks like 512 or 1024.
 
     To try and save addresses even further, Public and Private Addresses were introduced. Basically a network would have one known, outward-facing, less secure IP address that would be
-    known as the Public IP. No 2 Public IPs can ever be the same because the internet wouldn't know which device to send data to. The Public IP is what allows a network to connect to 
+    known as the Public IP. No two Public IPs can ever be the same because the internet wouldn't know which device to send data to. The Public IP is what allows a network to connect to 
     the internet. 
     The Private IP is the IP of a device/host WITHIN the network. These are more secure and Private IPs do NOT have to be unique as long as they're in different networks. Private
     IPs can NOT connect you to the internet and NAT (Network Address Translation) must occur so that the router can swap the Private IP for the Public IP, therefore allowing connection
