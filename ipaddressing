@@ -19,9 +19,12 @@ There are 2 main types of IP Addresses:
     Class A: 1-126.x.x.x | 16 Million IPs
     Class B: 128-191.0.x.x | 65 Thousand IPs
     Class C: 192-223.0.0.x | 254 IPs
+    Class D: 224-239.0.0.x| Reserved for Multicast Systems
+    Class E: 240-255.0.0.x | Reserved for Experiments
     A company with, say, 300 employees would be forced into Class B, would use the 300 IPs that they needed, and the other 65 thousand IPs would go completely to waste. Later,
-    engineers realized that too many IPs were being wasted, and there was a growing demand for IP addresses. So they introduced a system known as Classless Inter-Domain Routing (CIDR).
-    CIDR essentially forgets classes and splits a class into exactly how many IPs a company needs by breaking it into blocks like 512 or 1024.
+    engineers realized that too many IPs were being wasted, and there was a growing demand for IP addresses (Which was never thought to be a problem originally considering that
+    were around 4 billion available IPs when the internet first began). So they introduced a system known as Classless Inter-Domain Routing (CIDR). CIDR essentially forgets classes 
+    and splits a class into exactly how many IPs a company needs by breaking it into blocks like 512 or 1024.
 
     To try and save addresses even further, Public and Private Addresses were introduced. Basically a network would have one known, outward-facing, less secure IP address that would be
     known as the Public IP. No two Public IPs can ever be the same because the internet wouldn't know which device to send data to. The Public IP is what allows a network to connect to 
@@ -36,7 +39,8 @@ There are 2 main types of IP Addresses:
     INSIDE the octet, stating that they only need 126 hosts (126 because ending in ".0" would be the Network ID, and ending in ".127" would be the broadcast address. Broadcast address
     is the unique address used to send data to all local devices on the network at the same time. Broadcast address is always going to be the last IP in that sepecific subnet.
 
-  
-  -IPv6: x1x28-bit hexadecimal string of characters utilizing both letters and numbers to make up the IP
+
+  -IPv6: 128-bit hexadecimal string of characters utilizing both letters (A-F) and numbers to make up the IP. This is the new generation of IP addresses and is considered to have
+    practically an infinite amount of IPs because it has over 340 undecillion posssible IPs. What makes it so 
   
 
