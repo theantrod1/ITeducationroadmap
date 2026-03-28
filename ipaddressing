@@ -45,10 +45,11 @@ There are 2 main types of IP Addresses:
     even possibly render NAT (Network Address Translation) completely useless. Considering NAT was used as a band-aid to make sure that we didn't run out of IPv4 addresses. But since
     for the forseeable future (the next few trillion years) it's essentially impossible to use all those IPs, we would just assign every device a unique IP address.
 
-    IPv6 also got rid of the old Subnet Mask, instead of being in a dotted-decimal format, to instead being a forward slash followed by the number of network bits (Example: /64).
-    /64 are common addresses when it comes to IPv6, spliting the 128-bit number right down the middle and showing clearly the network and the host. 
+    IPv6 also got rid of the old Subnet Mask, replacing it with a Prefix Length (Example: /64). /64 are common addresses when it comes to IPv6, spliting the 128-bit number right
+    down the middle and showing clearly the Network Prefix and the Interface ID.
 
     Although IPv6 addresses are lengthy, there are ways to compress the address. As an example, imagine using the IPv6 Address: 2001:0db8:0000:0000:a111:b222:c333:abcd. Rather
     than filling multiple hextets with "0000", what we can do is replace all the 0s with a double colon "::". 2001:0db8::a111:b222:c333:abcd. The caveat is that you can only
-    use the double colons one time in an address
+    use the double colons one time in an address. If used in two different position the computer can't determine how many 0s are missing from each colons. Although you can only do
+    the colon one time, there are other methods for compressing an IPv6 address. For example, one shortcut is removing all leading 0s in a hextet.
     
