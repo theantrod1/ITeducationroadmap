@@ -40,7 +40,15 @@ There are 2 main types of IP Addresses:
     is the unique address used to send data to all local devices on the network at the same time. Broadcast address is always going to be the last IP in that sepecific subnet.
 
 
-  -IPv6: 128-bit hexadecimal string of characters utilizing both letters (A-F) and numbers to make up the IP. This is the new generation of IP addresses and is considered to have
-    practically an infinite amount of IPs because it has over 340 undecillion posssible IPs. What makes it so 
-  
+  -IPv6: 128-bit hexadecimal string of characters utilizing both letters (A-F) and numbers to make up the IP. Example: 2001:0db8:85a3::8a2e:0370:7334. This is the new generation of 
+    IP addresses and is considered to have practically an infinite amount of IPs because it has over 340 undecillion posssible IPs. The sheer number of IPv6 Addresses is enough to
+    even possibly render NAT (Network Address Translation) completely useless. Considering NAT was used as a band-aid to make sure that we didn't run out of IPv4 addresses. But since
+    for the forseeable future (the next few trillion years) it's essentially impossible to use all those IPs, we would just assign every device a unique IP address.
 
+    IPv6 also got rid of the old Subnet Mask, instead of being in a dotted-decimal format, to instead being a forward slash followed by the number of network bits (Example: /64).
+    /64 are common addresses when it comes to IPv6, spliting the 128-bit number right down the middle and showing clearly the network and the host. 
+
+    Although IPv6 addresses are lengthy, there are ways to compress the address. As an example, imagine using the IPv6 Address: 2001:0db8:0000:0000:a111:b222:c333:abcd. Rather
+    than filling multiple hextets with "0000", what we can do is replace all the 0s with a double colon "::". 2001:0db8::a111:b222:c333:abcd. The caveat is that you can only
+    use the double colons one time in an address
+    
