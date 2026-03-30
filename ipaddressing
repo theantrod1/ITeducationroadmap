@@ -66,6 +66,7 @@ There are 2 main types of IP Addresses:
     -Anycast: Shared IP addresses across different servers in different physical locations which allows your network to connect you to whichever server is closest to you.
       Prefix: 2000::/3 (Anycast has no specific IP address so the default would just be the Global Unicast Prefix)
 
+    The 2001:DB8::/32 range is reserved for use in documentation and examples.
 
 -The Loopback Address (127.0.0.1 / ::1): The internal IP address a computer uses to communicate with itself. In troubleshooting, running a ping 127.0.0.1 confirms that the 
 device's own network interface card (NIC) and TCP/IP stack are functioning correctly, even if it is completely disconnected from the wider network.
