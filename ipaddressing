@@ -50,6 +50,6 @@ There are 2 main types of IP Addresses:
 
     Although IPv6 addresses are lengthy, there are ways to compress the address. As an example, imagine using the IPv6 Address: 2001:0db8:0000:0000:a111:b222:c333:abcd. Rather
     than filling multiple hextets with "0000", what we can do is replace all the 0s with a double colon "::". 2001:0db8::a111:b222:c333:abcd. The caveat is that you can only
-    use the double colons one time in an address. If used in two different position the computer can't determine how many 0s are missing from each colons. Although you can only do
+    use the double colons one time in an address. If used in two different position the computer can't determine how many 0s are missing from each colons. Although you can only use
     the colon one time, there are other methods for compressing an IPv6 address. For example, one shortcut is removing all leading 0s in a hextet.
     
