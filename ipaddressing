@@ -18,9 +18,12 @@ There are 2 main types of IP Addresses:
     Classes were way too rigid. Depending on the class you were in would determine the amount of IPs along with the what number IPs you'd get.
     Class A: 1-126.x.x.x | 16 Million IPs
     Class B: 128-191.0.x.x | 65 Thousand IPs
+      (Private Class B: 172.16.x.x - 172.31.x.x)
     Class C: 192-223.0.0.x | 254 IPs
     Class D: 224-239.0.0.x| Reserved for Multicast Systems
     Class E: 240-255.0.0.x | Reserved for Experiments
+      (Limited Broadcast Address: 255.255.255.255)
+      (AIPA Range: 169.254.0.0 - 169.254.255.255)
     A company with, say, 300 employees would be forced into Class B, would use the 300 IPs that they needed, and the other 65 thousand IPs would go completely to waste. Later,
     engineers realized that too many IPs were being wasted, and there was a growing demand for IP addresses (Which was never thought to be a problem originally considering that
     were around 4 billion available IPs when the internet first began). So they introduced a system known as Classless Inter-Domain Routing (CIDR). CIDR essentially forgets classes 
@@ -84,3 +87,6 @@ and may not be able to communicate with an IPv6 address, allowing said device to
 
 -VLSM (Variable Length Subnet Masking): A subnetting technique that divides a network into subnets of various sizes (e.g., /25, /27, /30). As the practical application of CIDR, 
 it prevents IPv4 address waste by tailoring each subnet to the exact number of hosts required.
+
+-IPv6 Tunneling: A transition method that routes IPv6 traffic across an IPv4 network using encapsulation (wrapping an IPv6 packet inside an IPv4 header). While vital for compatibility,
+unmonitored tunnels can create security blind spots by hiding malicious payloads within the IPv4 envelope.
