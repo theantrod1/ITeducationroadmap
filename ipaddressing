@@ -17,9 +17,11 @@ There are 2 main types of IP Addresses:
     IPs on this standard due to poor management and unpredictability of the internet becoming as big as it did. A big issue with the distribution of these IPs was the use of classes. 
     Classes were way too rigid. Depending on the class you were in would determine the amount of IPs along with the what number IPs you'd get.
     Class A: 1-126.x.x.x | 16 Million IPs
+      (Private Class A: 10.0.0.0 - 10.255.255.255)
     Class B: 128-191.0.x.x | 65 Thousand IPs
       (Private Class B: 172.16.x.x - 172.31.x.x)
     Class C: 192-223.0.0.x | 254 IPs
+      (Private Class C: 192.168.x.x)
     Class D: 224-239.0.0.x| Reserved for Multicast Systems
     Class E: 240-255.0.0.x | Reserved for Experiments
       (Limited Broadcast Address: 255.255.255.255)
