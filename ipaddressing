@@ -24,7 +24,8 @@ There are 2 main types of IP Addresses:
     A company with, say, 300 employees would be forced into Class B, would use the 300 IPs that they needed, and the other 65 thousand IPs would go completely to waste. Later,
     engineers realized that too many IPs were being wasted, and there was a growing demand for IP addresses (Which was never thought to be a problem originally considering that
     were around 4 billion available IPs when the internet first began). So they introduced a system known as Classless Inter-Domain Routing (CIDR). CIDR essentially forgets classes 
-    and splits a class into exactly how many IPs a company needs by breaking it into blocks like 512 or 1024.
+    and splits a class into exactly how many IPs a company needs by breaking it into blocks like 512 or 1024. In CIDR notation, seeing an IP such as: 129.161.1.0/24, the "/24" 
+    represents the number of bits reserved for the Network ID portion of the IP.
 
     To try and save addresses even further, Public and Private Addresses were introduced. Basically a network would have one known, outward-facing, less secure IP address that would be
     known as the Public IP. No two Public IPs can ever be the same because the internet wouldn't know which device to send data to. The Public IP is what allows a network to connect to 
