@@ -75,3 +75,8 @@ automatically assigns itself an address in the 169.254.x.x range. Seeing this IP
 
 -Default Gateway: The specific IP address of the local router that a device uses to send data outside of its own local network. If a device has a valid IP but no Default Gateway 
 configured, it can talk to other computers in the same building, but it cannot reach the internet.
+
+-Dual Stacking: Device, routing, operating system, etc. running both IPv4 and IPv6 simultaneously. This may occur since a large majority of devices still utilize IPv4 addressing
+and may not be able to communicate with an IPv6 address, allowing said device to speak to both legacy and modern systems.
+
+-Subnet Calculation Subnets are calculated as 2 to the power of borrowed bits (2 to the 3rd = 8).
