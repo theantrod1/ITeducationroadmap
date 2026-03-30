@@ -53,3 +53,24 @@ There are 2 main types of IP Addresses:
     use the double colons one time in an address. If used in two different position the computer can't determine how many 0s are missing from each colons. Although you can only use
     the colon one time, there are other methods for compressing an IPv6 address. For example, one shortcut is removing all leading 0s in a hextet.
     
+     Just like IPv4, IPv6 has different types of addresses that serve different purposes. The following are all address types of IPv6:
+    -Global Unicast: Is a publicly routable address that essentially functions equally to that of the Public Address in IPv4. 
+      Prefix: 2000::/3
+    -Unique Local: Is the equivalent to a Private Address in IPv4 addresses in that it's only routable in the Local Area Network (LAN).
+      Prefix: FC00::/7 (The "C" in the prefix is can either be a "C" or a "D")
+    -Link-Local: Automcatically assigned IPs that are not routable and are designed only to function over a single area of a network. Will never go through a router.
+      Prefix: FE80::/10 
+    -Multicast: Addresses used to send to computers/devices that are listening for that specific multicast address. Replaced the Broadcast Address of IPv4
+      Prefix: FF00::/8
+    -Anycast: Shared IP addresses across different servers in different physical locations which allows your network to connect you to whichever server is closest to you.
+      Prefix: 2000::/3 (Anycast has no specific IP address so the default would just be the Global Unicast Prefix)
+
+
+-The Loopback Address (127.0.0.1 / ::1): The internal IP address a computer uses to communicate with itself. In troubleshooting, running a ping 127.0.0.1 confirms that the 
+device's own network interface card (NIC) and TCP/IP stack are functioning correctly, even if it is completely disconnected from the wider network.
+
+-APIPA (Automatic Private IP Addressing): The IPv4 equivalent of a Link-Local address. If a computer is configured to get a dynamic IP but fails to reach the DHCP server, it 
+automatically assigns itself an address in the 169.254.x.x range. Seeing this IP is an immediate indicator of a DHCP failure or a physical network disconnect.
+
+-Default Gateway: The specific IP address of the local router that a device uses to send data outside of its own local network. If a device has a valid IP but no Default Gateway 
+configured, it can talk to other computers in the same building, but it cannot reach the internet.
