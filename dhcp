@@ -1,4 +1,14 @@
 #dhcp
 
-March 30, 2026
+March 31, 2026
 
+Having just mapped out the foundation of IP addressing, the next step on the AI Checklist is DHCP. I am dedicating this next section to breaking down the exact mechanics
+behind how devices automatically receive their network identities. Understanding how networks dynamically manage and assign these addresses is a critical foundational piece for
+understanding network infrastructure and security.
+
+There are two different ways to assign a computer an IP:
+-Static IP: Manual input from a network admin
+-Dynamic IP: Automatic input from a DHCP server
+
+DHCP (Dynamic Host Configuration Protocol): An automatic client/server protocol that assigns IP addresses/other configuration details like DNS, Default Gateway, and Subnet Maks
+to devices. 
