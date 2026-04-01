@@ -11,4 +11,14 @@ There are two different ways to assign a computer an IP:
 -Dynamic IP: Automatic input from a DHCP server
 
 DHCP (Dynamic Host Configuration Protocol): An automatic client/server protocol that assigns IP addresses/other configuration details like DNS, Default Gateway, and Subnet Mask
-to devices. 
+to devices. DHCP is considered the superior method of configuration because it's automatic and it makes managing servers way easier.
+
+A DHCP server lends IP addresses to computers on its network from a scope. A scope is a range of IPs that a DHCP server can hand out. The scope can be configured to either increase
+or decrease the range. Rather than being given to them, the IPs that are assigned to the devices on a network are actually leases. Leases are essentially just the amount of time that
+an IP is assigned to a computer/device. Lease duration can be configured by network admins and can be any length of time they see fit (whether it's an hour, day, month, etc.). 
+The issue is with long lease durations is that the longer they are, the easier it becomes to exhaust all the IPs in a DHCP server's scope. Leases were created to make sure that DHCP 
+servers don't run out of IPs in their scope. However, if you would ever like to ensure that a certain device gets the same IP everytime it joins the network you can reserve it an IP.
+This is known as DHCP Reservation. The way it works is by making linking a MAC Address in a DHCP server to a specific network. The reason why this works so well is because it
+maintains the stability of a Static IP address but is automatically managed by the central system DHCP Server.
+
+DHCP is a service that runs on a Microsoft or Linux Server, but is also a service that runs on routers.
