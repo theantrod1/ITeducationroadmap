@@ -19,6 +19,8 @@ an IP is assigned to a computer/device. Lease duration can be configured by netw
 The issue is with long lease durations is that the longer they are, the easier it becomes to exhaust all the IPs in a DHCP server's scope. Leases were created to make sure that DHCP 
 servers don't run out of IPs in their scope. However, if you would ever like to ensure that a certain device gets the same IP everytime it joins the network you can reserve it an IP.
 This is known as DHCP Reservation. The way it works is by making linking a MAC Address in a DHCP server to a specific network. The reason why this works so well is because it
-maintains the stability of a Static IP address but is automatically managed by the central system DHCP Server.
+maintains the stability of a Static IP address but is automatically managed by the central DHCP Server system.
 
-DHCP is a service that runs on a Microsoft or Linux Server, but is also a service that runs on routers.
+DHCP is a service that runs on Server such as a Microsoft or Linux Server, but is also a service that runs on routers. 
+
+DHCP DORA Process: This is the actual process of how a device asks for an IP address.
