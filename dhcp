@@ -7,8 +7,8 @@ behind how devices automatically receive their network identities. Understanding
 understanding network infrastructure and security.
 
 There are two different ways to assign a computer an IP:
--Static IP: Manual input from a network admin
+-Static IP: Manual configuration from a network admin
 -Dynamic IP: Automatic input from a DHCP server
 
-DHCP (Dynamic Host Configuration Protocol): An automatic client/server protocol that assigns IP addresses/other configuration details like DNS, Default Gateway, and Subnet Maks
+DHCP (Dynamic Host Configuration Protocol): An automatic client/server protocol that assigns IP addresses/other configuration details like DNS, Default Gateway, and Subnet Mask
 to devices. 
