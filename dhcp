@@ -11,16 +11,29 @@ There are two different ways to assign a computer an IP:
 -Dynamic IP: Automatic input from a DHCP server
 
 DHCP (Dynamic Host Configuration Protocol): An automatic client/server protocol that assigns IP addresses/other configuration details like DNS, Default Gateway, and Subnet Mask
-to devices. DHCP is considered the superior method of configuration because it's automatic and it makes managing servers way easier.
+to devices. DHCP is considered the standard method of configuration because it's automatic and it makes managing servers way easier.
 
-A DHCP server lends IP addresses to computers on its network from a scope. A scope is a range of IPs that a DHCP server can hand out. The scope can be configured to either increase
-or decrease the range. Rather than being given to them, the IPs that are assigned to the devices on a network are actually leases. Leases are essentially just the amount of time that
+A DHCP server lends IP addresses to computers on its network from a scope. A scope is a range of IPs that a DHCP server can hand out. The scope can be configured to define the
+IP pool. Rather than being given to them, the IPs that are assigned to the devices on a network are actually leases. Leases are essentially just the amount of time that
 an IP is assigned to a computer/device. Lease duration can be configured by network admins and can be any length of time they see fit (whether it's an hour, day, month, etc.). 
 The issue is with long lease durations is that the longer they are, the easier it becomes to exhaust all the IPs in a DHCP server's scope. Leases were created to make sure that DHCP 
 servers don't run out of IPs in their scope. However, if you would ever like to ensure that a certain device gets the same IP everytime it joins the network you can reserve it an IP.
-This is known as DHCP Reservation. The way it works is by making linking a MAC Address in a DHCP server to a specific network. The reason why this works so well is because it
+This is known as DHCP Reservation. The way it works is by making linking a MAC Address in a DHCP server to a specific IP. The reason why this works so well is because it
 maintains the stability of a Static IP address but is automatically managed by the central DHCP Server system.
 
 DHCP is a service that runs on Server such as a Microsoft or Linux Server, but is also a service that runs on routers. 
 
-DHCP DORA Process: This is the actual process of how a device asks for an IP address.
+DHCP DORA Process: This is the actual process of how a device asks for an IP address. It is broken down into 4 steps:
+1. Discovery: This is the client/device getting connected and sending a message essentially checking if there are any DHCP Servers to connect to that will provide them with an IP.
+  Because the client has no IP, its Source IP is 0.0.0.0. It sends the message to the universal broadcast IP: 255.255.255.255 and universal broadcast MAC Address: FF:FF:FF:FF:FF:FF.
+2. Offer: Every DHCP that hears the message will check its IP pool for available IPs. The server then responds with the proposed IP, Default Gateway, Subnet Mask, and lease time.
+  It then sends this straight back to the client's MAC address.
+3. Request: The client replies by choosing one of the IPs that were offered (if there were multiple), essentially saying "I accept this IP". This step is still a broadcast for 
+  all the potential servers that replied with an IP to tell all the other servers "No thank you, I don't need your IP."
+4. Acknowledgement(ACK): Server registers the IP as leased and sends the final confirmation and network configuration to the client. After the client receives this confirmation
+the process is complete.
+
+DHCP strictly uses UDP. Specifically UDP Ports 67/68. Port 67 for the DHCP Server and Port 68 for the Client. DHCP Servers use UDP because it would be impossible for them to use
+TCP. TCP is a connection oriented protocol that functions with a 3-way handshake (SYN, SYN-ACK, ACK) to establish said connection. However, the issue there is that
+both the client and server need to have functioning IPs. Since our device starting the DORA process doesn't have an IP yet it would be impossible to start the 3-way Handshake.
+UDP works because it's connectionless and doesn't need any handshakes to work. It just packages and sends it into the network with an IP of 0.0.0.0.
