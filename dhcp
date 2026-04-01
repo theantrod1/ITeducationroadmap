@@ -33,7 +33,7 @@ DHCP DORA Process: This is the actual process of how a device asks for an IP add
 4. Acknowledgement(ACK): Server registers the IP as leased and sends the final confirmation and network configuration to the client. After the client receives this confirmation
 the process is complete.
 
-DHCP strictly uses UDP. Specifically UDP Ports 67/68. Port 67 for the DHCP Server and Port 68 for the Client. DHCP Servers use UDP because it would be impossible for them to use
+DHCP strictly uses UDP, specifically UDP Ports 67/68. Port 67 for the DHCP Server and Port 68 for the Client. DHCP Servers use UDP because it would be impossible for them to use
 TCP. TCP is a connection oriented protocol that functions with a 3-way handshake (SYN, SYN-ACK, ACK) to establish said connection. However, the issue there is that
 both the client and server need to have functioning IPs. Since our device starting the DORA process doesn't have an IP yet it would be impossible to start the 3-way Handshake.
-UDP works because it's connectionless and doesn't need any handshakes to work. It just packages and sends it into the network with an IP of 0.0.0.0.
+UDP works because it's connectionless and doesn't need any handshakes to work. It just packages the data and sends it into the network with an IP of 0.0.0.0.
