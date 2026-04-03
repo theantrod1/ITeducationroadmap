@@ -16,12 +16,14 @@ to devices. DHCP is considered the standard method of configuration because it's
 A DHCP server lends IP addresses to computers on its network from a scope. A scope is a range of IPs that a DHCP server can hand out. The scope can be configured to define the
 IP pool. Rather than being given to them, the IPs that are assigned to the devices on a network are actually leases. Leases are essentially just the amount of time that
 an IP is assigned to a computer/device. Lease duration can be configured by network admins and can be any length of time they see fit (whether it's an hour, day, month, etc.). 
-The issue is with long lease durations is that the longer they are, the easier it becomes to exhaust all the IPs in a DHCP server's scope. Leases were created to make sure that DHCP 
+The issue with long lease durations is that the longer they are, the easier it becomes to exhaust all the IPs in a DHCP server's scope. Leases were created to make sure that DHCP 
 servers don't run out of IPs in their scope. However, if you would ever like to ensure that a certain device gets the same IP everytime it joins the network you can reserve it an IP.
 This is known as DHCP Reservation. The way it works is by linking a MAC Address in a DHCP server to a specific IP. The reason why this works so well is because it
-maintains the stability of a Static IP address but is automatically managed by the central DHCP Server system.
+maintains the stability of a Static IP address but is automatically managed by the central DHCP Server system. DHCP Exclusions are similar to Reservations in that they set aside
+certain IPs but there are no specifications. It just tells the DHCP Server "Don't give any IPs within the range of 192.168.1.10 - 192.168.1.20." A network admin would still have to
+manually configure a Static IP.
 
-DHCP is a service that runs on Server such as a Microsoft or Linux Server, but is also a service that runs on routers. 
+DHCP is a service that runs on servers such as a Microsoft or Linux Server, but is also a service that runs on routers.
 
 DHCP DORA Process: This is the actual process of how a device asks for an IP address. It is broken down into 4 steps:
 1. Discovery: This is the client/device getting connected and sending a message essentially checking if there are any DHCP Servers to connect to that will provide them with an IP.
@@ -32,6 +34,11 @@ DHCP DORA Process: This is the actual process of how a device asks for an IP add
   all the potential servers that replied with an IP to tell all the other servers "No thank you, I don't need your IP."
 4. Acknowledgement(ACK): Server registers the IP as leased and sends the final confirmation and network configuration to the client. After the client receives this confirmation
 the process is complete.
+
+DHCP Relay Agents: A software feature (service) that is usually applied to a router to solve the issue of routers dropping DHCP broadcasts. Because the initial step in the DORA 
+Process is a broadcast message, routers will drop it, making it impossible to connect to a DHCP Server on another network. So DHCP Relay Agents (IP Helpers) are applied directly
+to the router, essentially telling the router that if it hears a broadcast on a certain port, not to drop it, but rather wrap it up as a unicast message and then send it directly 
+over to a DHCP Server.
 
 DHCP strictly uses UDP, specifically UDP Ports 67/68. Port 67 for the DHCP Server and Port 68 for the Client. DHCP Servers use UDP because it would be impossible for them to use
 TCP. TCP is a connection oriented protocol that functions with a 3-way handshake (SYN, SYN-ACK, ACK) to establish said connection. However, the issue there is that
