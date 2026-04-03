@@ -17,11 +17,11 @@ A DHCP server lends IP addresses to computers on its network from a scope. A sco
 IP pool. Rather than being given to them, the IPs that are assigned to the devices on a network are actually leases. Leases are essentially just the amount of time that
 an IP is assigned to a computer/device. Lease duration can be configured by network admins and can be any length of time they see fit (whether it's an hour, day, month, etc.). 
 The issue with long lease durations is that the longer they are, the easier it becomes to exhaust all the IPs in a DHCP server's scope. Leases were created to make sure that DHCP 
-servers don't run out of IPs in their scope. However, if you would ever like to ensure that a certain device gets the same IP everytime it joins the network you can reserve it an IP.
-This is known as DHCP Reservation. The way it works is by linking a MAC Address in a DHCP server to a specific IP. The reason why this works so well is because it
-maintains the stability of a Static IP address but is automatically managed by the central DHCP Server system. DHCP Exclusions are similar to Reservations in that they set aside
-certain IPs but there are no specifications. It just tells the DHCP Server "Don't give any IPs within the range of 192.168.1.10 - 192.168.1.20." A network admin would still have to
-manually configure a Static IP.
+servers don't run out of IPs in their scope. At 50% of the lease time, leases will attempt to renew the current IP with the original server. However, if you would ever like to 
+ensure that a certain device gets the same IP everytime it joins the network you can reserve it an IP. This is known as DHCP Reservation. The way it works is by linking a MAC Address 
+in a DHCP server to a specific IP. The reason why this works so well is because it maintains the stability of a Static IP address but is automatically managed by the central DHCP Server 
+system. DHCP Exclusions are similar to Reservations in that they set asidecertain IPs but there are no specifications. It just tells the DHCP Server "Don't give any IPs within 
+the range of 192.168.1.10 - 192.168.1.20." A network admin would still have to manually configure a Static IP.
 
 DHCP is a service that runs on servers such as a Microsoft or Linux Server, but is also a service that runs on routers.
 
@@ -37,8 +37,8 @@ the process is complete.
 
 DHCP Relay Agents: A software feature (service) that is usually applied to a router to solve the issue of routers dropping DHCP broadcasts. Because the initial step in the DORA 
 Process is a broadcast message, routers will drop it, making it impossible to connect to a DHCP Server on another network. So DHCP Relay Agents (IP Helpers) are applied directly
-to the router, essentially telling the router that if it hears a broadcast on a certain port, not to drop it, but rather wrap it up as a unicast message and then send it directly 
-over to a DHCP Server.
+to the router, essentially telling the router that if it hears a broadcast on a certain port, not to drop it, but rather the Relay Agent stamps its local interface IP into the 
+giaddr field, wrap it up as a unicast message and then send it directly over to a DHCP Server. 
 
 DHCP strictly uses UDP, specifically UDP Ports 67/68. Port 67 for the DHCP Server and Port 68 for the Client. DHCP Servers use UDP because it would be impossible for them to use
 TCP. TCP is a connection oriented protocol that functions with a 3-way handshake (SYN, SYN-ACK, ACK) to establish said connection. However, the issue there is that
