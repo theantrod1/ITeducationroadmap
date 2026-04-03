@@ -17,11 +17,13 @@ A DHCP server lends IP addresses to computers on its network from a scope. A sco
 IP pool. Rather than being given to them, the IPs that are assigned to the devices on a network are actually leases. Leases are essentially just the amount of time that
 an IP is assigned to a computer/device. Lease duration can be configured by network admins and can be any length of time they see fit (whether it's an hour, day, month, etc.). 
 The issue with long lease durations is that the longer they are, the easier it becomes to exhaust all the IPs in a DHCP server's scope. Leases were created to make sure that DHCP 
-servers don't run out of IPs in their scope. At 50% of the lease time, leases will attempt to renew the current IP with the original server. However, if you would ever like to 
-ensure that a certain device gets the same IP everytime it joins the network you can reserve it an IP. This is known as DHCP Reservation. The way it works is by linking a MAC Address 
-in a DHCP server to a specific IP. The reason why this works so well is because it maintains the stability of a Static IP address but is automatically managed by the central DHCP Server 
-system. DHCP Exclusions are similar to Reservations in that they set asidecertain IPs but there are no specifications. It just tells the DHCP Server "Don't give any IPs within 
-the range of 192.168.1.10 - 192.168.1.20." A network admin would still have to manually configure a Static IP.
+servers don't run out of IPs in their scope. At 50% of the lease time (Renewal - T1), leases will attempt to renew the current IP with the original server. At 87.5% of the lease time
+(Rebinding - T2) if the server hasn't responded, the client assumes the original server is deda or unreachable and sends out an ANY Broadcast Request to try to save the lease.
+If no server ends up responding with ACK then the lease goes back to the original server and client usually assigns itself an APIPA address and restarts DORA Process.
+However, if you would ever like to ensure that a certain device gets the same IP everytime it joins the network you can reserve it an IP. This is known as DHCP Reservation. 
+The way it works is by linking a MAC Address in a DHCP server to a specific IP. The reason why this works so well is because it maintains the stability of a Static IP address 
+but is automatically managed by the central DHCP Server system. DHCP Exclusions are similar to Reservations in that they set asidecertain IPs but there are no specifications. 
+It just tells the DHCP Server "Don't give any IPs within the range of 192.168.1.10 - 192.168.1.20." A network admin would still have to manually configure a Static IP.
 
 DHCP is a service that runs on servers such as a Microsoft or Linux Server, but is also a service that runs on routers.
 
@@ -49,3 +51,10 @@ Automatic Private IP Addressing (APIPA): If a computer can't reach the DHCP Serv
 Along with an IP it will also self-assign a Subnet Mask: 255.255.0.0. Computers do this because even though they can't get an IP from a DHCP Server, they'll still be capable of
 communicating with other devices on the same local network (subnet), which would be comprised of other devices that also have self-assigned IP addresses. However, because APIPA 
 does not assign a Default Gateway, it does NOT give devices the ability to connect to the internet or route traffic to any outside networks.
+
+When the server sends the offer to the device, it sends the IP address as well as "Options". Although the IP is the main header, the server sends extra information like the
+Default Gateway, Subnet Mask, and the DNS Servers.
+The Options are:
+Option 1 (Subnet Mask): Defines the network boundaries.
+Option 3 (Router) Provides default gateway address.
+Option 6 (DNS Servers) Provides IP of DNS Server that client will use to resolve domain names to IP addresses.
