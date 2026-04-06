@@ -37,6 +37,16 @@ DHCP DORA Process: This is the actual process of how a device asks for an IP add
 4. Acknowledgement(ACK): Server registers the IP as leased and sends the final confirmation and network configuration to the client. After the client receives this confirmation
 the process is complete.
 
+DHCP SARR Process (DHCPv6):
+While IPv4 uses DORA (Discover, Offer, Request, ACK), IPv6 uses SARR:
+1. Solicit (Equiv. to Discover): The client sends a message to the "All_DHCP_Relay_Agents_and_Servers" multicast address (ff02::1:2) to find a server.
+2. Advertise (Equiv. to Offer): Any available DHCPv6 server responds with an Advertise message, offering an IPv6 address and configuration.
+3. Request (Equiv. to Request): The client asks the server to confirm and assign the offered address.
+4. Reply (Equiv. to ACK): The server sends the final confirmation with the lease details.
+
+In IPv6, clients can obtain IP addresses even without a DHCP server. 
+
+
 DHCP Relay Agents: A software feature (service) that is usually applied to a router to solve the issue of routers dropping DHCP broadcasts. Because the initial step in the DORA 
 Process is a broadcast message, routers will drop it, making it impossible to connect to a DHCP Server on another network. So DHCP Relay Agents (IP Helpers) are applied directly
 to the router, essentially telling the router that if it hears a broadcast on a certain port, not to drop it, but rather the Relay Agent stamps its local interface IP into the 
