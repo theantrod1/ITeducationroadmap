@@ -58,3 +58,12 @@ The Options are:
 Option 1 (Subnet Mask): Defines the network boundaries.
 Option 3 (Router) Provides default gateway address.
 Option 6 (DNS Servers) Provides IP of DNS Server that client will use to resolve domain names to IP addresses.
+
+DHCP Messages:
+  DHCP Release: A unicast message from the client to the server to manually end a lease and return the IP to the pool (triggered by ipconfig /release).
+  DHCP Inform: Used when a client already has an IP (static) but needs to request Option Codes (DNS, Gateway) from the server.
+  DHCP Decline: A broadcast from the client to the server indicating the offered IP is already in use on the network (preventing IP conflicts).
+  DHCP NAK: A server-to-client message refusing a lease request, usually because the client is requesting an IP that is invalid for its current subnet.
+
+
+DHCP Superscope- Admin feature in Windows servers that allow you to group together multiple individual scopes together under a single umbrella.
