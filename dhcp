@@ -18,7 +18,7 @@ IP pool. Rather than being given to them, the IPs that are assigned to the devic
 an IP is assigned to a computer/device. Lease duration can be configured by network admins and can be any length of time they see fit (whether it's an hour, day, month, etc.). 
 The issue with long lease durations is that the longer they are, the easier it becomes to exhaust all the IPs in a DHCP server's scope. Leases were created to make sure that DHCP 
 servers don't run out of IPs in their scope. At 50% of the lease time (Renewal - T1), leases will attempt to renew the current IP with the original server. At 87.5% of the lease time
-(Rebinding - T2) if the server hasn't responded, the client assumes the original server is deda or unreachable and sends out an ANY Broadcast Request to try to save the lease.
+(Rebinding - T2) if the server hasn't responded, the client assumes the original server is dead or unreachable and sends out an ANY Broadcast Request to try to save the lease.
 If no server ends up responding with ACK then the lease goes back to the original server and client usually assigns itself an APIPA address and restarts DORA Process.
 However, if you would ever like to ensure that a certain device gets the same IP everytime it joins the network you can reserve it an IP. This is known as DHCP Reservation. 
 The way it works is by linking a MAC Address in a DHCP server to a specific IP. The reason why this works so well is because it maintains the stability of a Static IP address 
@@ -37,14 +37,18 @@ DHCP DORA Process: This is the actual process of how a device asks for an IP add
 4. Acknowledgement(ACK): Server registers the IP as leased and sends the final confirmation and network configuration to the client. After the client receives this confirmation
 the process is complete.
 
+
 DHCP SARR Process (DHCPv6):
 While IPv4 uses DORA (Discover, Offer, Request, ACK), IPv6 uses SARR:
-1. Solicit (Equiv. to Discover): The client sends a message to the "All_DHCP_Relay_Agents_and_Servers" multicast address (ff02::1:2) to find a server.
+1. Solicit (Equiv. to Discover): The client sends a message to the "All DHCP Relay Agents and Servers" multicast address (ff02::1:2) to find a server.
 2. Advertise (Equiv. to Offer): Any available DHCPv6 server responds with an Advertise message, offering an IPv6 address and configuration.
 3. Request (Equiv. to Request): The client asks the server to confirm and assign the offered address.
 4. Reply (Equiv. to ACK): The server sends the final confirmation with the lease details.
 
-In IPv6, clients can obtain IP addresses even without a DHCP server. 
+In IPv6, clients can obtain IP addresses even without a DHCP server. Clients can talk directly to the router to get an IP addresss using SLAAC (Stateless Address Autoconfiguration).
+The client would send the router an RS (Router Solicitation) message. The router responds back with a RA (Router Advertisement) message that contains the prefix (the network part
+of the address). The device then takes that prefix and generates its own interface identifier (host part). It usually does this using a random number or a method called EUI-64
+(which uses the device's MAC address).
 
 
 DHCP Relay Agents: A software feature (service) that is usually applied to a router to solve the issue of routers dropping DHCP broadcasts. Because the initial step in the DORA 
@@ -53,24 +57,29 @@ to the router, essentially telling the router that if it hears a broadcast on a 
 giaddr field, wrap it up as a unicast message and then send it directly over to a DHCP Server. In a DHCP packet SIADDR (Next Server IP Address) is responsible for finding the next 
 server in the booting process.
 
+
 DHCP strictly uses UDP, specifically UDP Ports 67/68. Port 67 for the DHCP Server and Port 68 for the Client. DHCP Servers use UDP because it would be impossible for them to use
 TCP. TCP is a connection oriented protocol that functions with a 3-way handshake (SYN, SYN-ACK, ACK) to establish said connection. However, the issue there is that
 both the client and server need to have functioning IPs. Since our device starting the DORA process doesn't have an IP yet it would be impossible to start the 3-way Handshake.
 UDP works because it's connectionless and doesn't need any handshakes to work. It just packages the data and sends it into the network with an IP of 0.0.0.0.
+(DHCPv6 uses ports 546 for Server and 547 for Clients)
 
 Automatic Private IP Addressing (APIPA): If a computer can't reach the DHCP Server, the computer will self-assign an IP Address within the range of 169.254.0.1 - 169.254.255.254.
 Along with an IP it will also self-assign a Subnet Mask: 255.255.0.0. Computers do this because even though they can't get an IP from a DHCP Server, they'll still be capable of
 communicating with other devices on the same local network (subnet), which would be comprised of other devices that also have self-assigned IP addresses. However, because APIPA 
 does not assign a Default Gateway, it does NOT give devices the ability to connect to the internet or route traffic to any outside networks.
 
+
 When the server sends the offer to the device, it sends the IP address as well as "Options". Although the IP is the main header, the server sends extra information like the
 Default Gateway, Subnet Mask, and the DNS Servers.
 The Options are:
 Option 1 (Subnet Mask): Defines the network boundaries.
-Option 3 (Router) Provides default gateway address.
-Option 6 (DNS Servers) Provides IP of DNS Server that client will use to resolve domain names to IP addresses.
+Option 3 (Router): Provides default gateway address.
+Option 6 (DNS Servers): Provides IP of DNS Server that client will use to resolve domain names to IP addresses.
+Option 15 (Domain Name): Provides the client with the specific DNS domain suffix (e.g., company.com) for the local network.
 Option 42 (NTP): Standard code for providing Network Time Protocol server addresses.
-Option 82 (Circuit ID): Provides "Circuit ID" info so a server knows which switch port a client is plugged into.
+Option 66 (TFTP): Tells a device the IP address or Hostname of a TFTP (Trivial File Transfer Protocol) server.
+Option 82 (Circuit ID): Provides "Circuit ID" info so a server knows which switch port a client is plugged into.  
 
 DHCP Messages:
   DHCP Release: A unicast message from the client to the server to manually end a lease and return the IP to the pool (triggered by ipconfig /release).
@@ -78,6 +87,17 @@ DHCP Messages:
   DHCP Decline: A broadcast from the client to the server indicating the offered IP is already in use on the network (preventing IP conflicts).
   DHCP NAK: A server-to-client message refusing a lease request, usually because the client is requesting an IP that is invalid for its current subnet.
 
+DHCP Client States:
+  INIT: The starting point. The client has no IP address and is preparing to send a DHCP Discover message.
+  SELECTING: The client has sent its Discover broadcast and is actively waiting to receive DHCP Offers from available servers.
+  REQUESTING: The client has picked an IP from an Offer and sent a DHCP Request back to the server to finalize the lease.
+  BOUND: The "Success" state. The client has received the ACK, has a fully functioning IP address, and is actively using it on the network.
+  RENEWING (T1): Triggered at 50% of the lease time. The client attempts to contact the original server via unicast to extend the lease.
+  REBINDING (T2): Triggered at 87.5% of the lease time. If the original server failed to respond, the client now broadcasts to any available server to save its lease.
+  INIT-REBOOT: A specialized state used when a device restarts. The client attempts to reverify its previous IP address rather than starting the full DORA process from scratch.
+
 DHCP Superscope- Admin feature in Windows servers that allow you to group together multiple individual scopes together under a single umbrella.
 
-DHCP Snooping- Filtering DHCP Messages from untrusted port sources
+DHCP Snooping- Filtering DHCP Messages from untrusted port sources.
+
+IP Source Guard (IPSG)- A Layer 2 security feature that works in conjunction with DHCP Snooping to prevent IP Spoofing attacks.
