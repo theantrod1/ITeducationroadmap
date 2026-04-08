@@ -62,7 +62,7 @@ DHCP strictly uses UDP, specifically UDP Ports 67/68. Port 67 for the DHCP Serve
 TCP. TCP is a connection oriented protocol that functions with a 3-way handshake (SYN, SYN-ACK, ACK) to establish said connection. However, the issue there is that
 both the client and server need to have functioning IPs. Since our device starting the DORA process doesn't have an IP yet it would be impossible to start the 3-way Handshake.
 UDP works because it's connectionless and doesn't need any handshakes to work. It just packages the data and sends it into the network with an IP of 0.0.0.0.
-(DHCPv6 uses ports 546 for Server and 547 for Clients)
+(DHCPv6 uses ports 547 for Server and 546 for Clients)
 
 Automatic Private IP Addressing (APIPA): If a computer can't reach the DHCP Server, the computer will self-assign an IP Address within the range of 169.254.0.1 - 169.254.255.254.
 Along with an IP it will also self-assign a Subnet Mask: 255.255.0.0. Computers do this because even though they can't get an IP from a DHCP Server, they'll still be capable of
