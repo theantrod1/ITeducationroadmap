@@ -2,4 +2,5 @@
 
 April 8, 2026
 
-After spending some time understanding about IP Addresses and later thne finding out about how the
+After spending some time understanding about IP Addresses and later finding out about how those IPs are assigned (DHCP), I'm going to dive now into the way that we interact with 
+them through DNS. 
