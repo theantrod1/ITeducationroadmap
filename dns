@@ -2,5 +2,9 @@
 
 April 8, 2026
 
-After spending some time understanding about IP Addresses and later finding out about how those IPs are assigned (DHCP), I'm going to dive now into the way that we interact with 
-them through DNS. 
+Having just wrapped up how network identities are built (IP Addressing) and handed out (DHCP), I am now moving into how they are actually found. I am dedicating this log to DNS.
+Instead of forcing us to memorize IP addresses, DNS works invisibly in the background to resolve domain names to machine-readable numbers. Here is a deep dive into exactly how that
+resolution process works.
+
+DNS (Domain Name System): Responsible for resolving names to numbers. More specifically, Domain Names to IP Addresses. So if you type a website name into a search bar, DNS will
+resolve that website name into a number, because all computers only speak in numbers.
