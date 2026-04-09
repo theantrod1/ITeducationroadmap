@@ -7,11 +7,31 @@ Instead of forcing us to memorize IP addresses, DNS works invisibly in the backg
 resolution process works.
 
 DNS (Domain Name System): Responsible for resolving names to numbers. More specifically, Domain Names to IP Addresses. So if you type a website name into a search bar, DNS will
-resolve that website name into a number, because all computers only speak in numbers.
+resolve that website name into a number, because all computers only speak in numbers. DNS occurs on UDP Port 53.
 
 DNS isn't just a magical translation from names to addresses though, DNS takes steps:
-  1. When you type google.com into a web browser, your web browser/OS are going to check in their cache memory to see if they have the IP address. Your OS will check if it has
-it anywhere its "Hosts" files or in its DNS cache. If it doesn't it goes to the next level.
-  2. If not found in the cache of the device it sends it to the Resolver Server. The Resolver is essentially the ISP and does most of the work when it comes to finding an IP
-address. The client is typically not strong enough to communicate with all the higher-level servers to be able to scour the internet for the IP of a website. The process that the
-Resolver uses to search for IPs is called "Recursion."
+  1. Browser/OS Cache: When you type google.com into a web browser, your web browser/OS are going to check in their cache memory to see if they have the IP address. Your OS will check 
+if it has it anywhere its "Hosts" files or in its DNS cache. If it doesn't it goes to the next level.
+  2. Recursive Resolver: If not found in the cache of the device it sends Recursive Query to the Resolver Server. The Resolver is usually provided by the ISP and does most of
+the work when it comes to finding an IP address. The client is typically not strong enough to communicate with all the higher-level servers to be able to scour the internet for 
+the IP of a website. The process that the Resolver uses to search for IPs is called "Recursion." 
+  3. Root Server: The Resolver then performs an Iterative Query to one of the 13 Root Servers. The Root servers might not know where "google.com" but they know where the 
+TLD (Top-Level Domain) Servers are.
+  4. TLD Server: The Resolver will then go to the TLD Servers based off the extension of the domain (in this case it would be '.com'). So it would send it to the server that manages
+all of the '.com' domains.
+  5. Authoritative Name Server: This is the final destination and is the server that is actually owned by the company/domain host. It contains the A Record (IPv4 Address) for the 
+domain and finally gives the Resolver the IP address.
+
+The Resolver then stores the IP address that is received by the Authoritative Server, sends it to the original device making the query, and stores the IP in its cache memory in
+case another query is made for that domain.
+
+Records
+  Identity Records (Address):
+    A Record: Maps a domain name to an IPv4 Address (Example: google.com -> 142.250.190.46)
+    AAAA Record: Maps domain name to an IPv6 Address (Example: google.com -> 2607:f8b0:4004:837::200e)
+    CNAME (Canonical Name): Rather than pointing to an IP, it points from one domain to another domain (Example: www.google.com -> google.com) 
+  Mail and Routing Records:
+    MX Record (Mail Exchange): These are the mail servers responsible for receiving mail on behalf of the domain.
+    NS Record (Name Server): These specify which DNS Servers are the Authoritative sources for a domain.
+  Security and Information Records: 
+    TXT Record: Record allowing admins to input human or machine-readable text into DNS.
