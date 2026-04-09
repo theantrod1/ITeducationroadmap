@@ -34,4 +34,12 @@ Records
     MX Record (Mail Exchange): These are the mail servers responsible for receiving mail on behalf of the domain.
     NS Record (Name Server): These specify which DNS Servers are the Authoritative sources for a domain.
   Security and Information Records: 
-    TXT Record: Record allowing admins to input human or machine-readable text into DNS.
+    TXT Record (Text): Allows admins to input human or machine-readable text into DNS.
+    PTR Record (Pointer): Seen as the "Reverse DNS", it maps an IP address to a domain name.
+    SRV Record (Service): Used to find the specific locations of services such as VoIP (Voice over Internet Protocol), SIP (Session Initiation Protocol), or Windows Active Directory
+    (Domain Controllers). This includes the port number and the priority.
+    SOA Record (Start of Authority): Contains essential information such as the admin's email address, last time zone was updated, and how often a secondary server should
+    refresh their data.
+
+DNS Zone- This is a portion of the DNS namespace that is managed by an admin/entity. It is defined by a Zone File that contains all the resource records (A, MX, CNAME, etc.) 
+for that domain.
