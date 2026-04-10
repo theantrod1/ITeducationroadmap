@@ -65,3 +65,10 @@ FQDN (Fully Qualified Domain Name)- This is the complete address for a specific 
 Hosts File- This is a plaintext file on an OS that maps hostnames to a specific IP address. This functioned as the "Legacy DNS" before the DNS we know today became a thing. 
 
 TTL (Time To Live)- This is a numerical value measured in seconds that's set by an admin to determine how long a Resolver or a Browser is allowed to cache an IP.
+
+Troubleshooting Commands:
+  -nslookup (Name System Lookup): This command tells you which DNS server you are connected to and what IP address it found. You can use it to test specific servers to let you
+  know whether the issue is the website or your ISP server (Example: nslookup google.com 8.8.8.8)
+  -ipconfig /flushdns: This wipes the computer's DNS cache. You can use it if a website changed their IP but your computer is still trying to go to the old IP. This command
+  will wipe the cache and force a new lookup.
+  -dig (Domain Information Groper): Works in the same way as nslookup but provides more detail such as the TTL and flags set on the packet. 
