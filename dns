@@ -45,6 +45,10 @@ Records
     SOA Record (Start of Authority): Contains essential information such as the admin's email address, last time zone was updated, and how often a secondary server should
     refresh their data.
 
+Primary vs Secondary Zone
+  -Primary Zone: Only version of the zone that you can add, change, and delete records. It is the authoriitative source of the data and is seen as the "Master" copy. This zone is
+  stored as a local text file (the Zone file) in server's hard drive.
+
 Split-Horizon DNS: A configuration where a DNS zone provides different responses based on the source of the query. Requests coming from the Internal Network resolve to a private IP, 
 while requests from the Public Internet resolve to a public IP (or are blocked). This enhances security by hiding internal network infrastructure from the outside world.
 
