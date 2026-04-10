@@ -45,7 +45,23 @@ Records
     SOA Record (Start of Authority): Contains essential information such as the admin's email address, last time zone was updated, and how often a secondary server should
     refresh their data.
 
+
+Caching vs Non-Caching Servers
+  Caching (Recursive): Recursive Resolvers are considered "Caching" Servers because they eventually find an IP for the user and store it in its memory for the duration of the TTL.
+  Non-Caching (Authoritative): These servers just hold onto the original Zone File that the IP is on.
+
+DNSSEC- Extentions that add a digital signature to DNS records to ensure that data is authentic and untampered with. DNSSEC ensures that a hacker can not perform attacks such as 
+DNS Cache Poisoning (where a hacker send a fake IP to the Resolver) by allowing the Resolver to cryptogrtaphically verify that the data originated from an Authoritative Server.
+
 DNS Zone- This is a portion of the DNS namespace that is managed by an admin/entity. It is defined by a Zone File that contains all the resource records (A, MX, CNAME, etc.) 
 for that domain.
 
-FQDN (Fully Qualified Domain Name)- This is the complete address for a specific host on the internet. (Example: www.google.com)
+FQDN (Fully Qualified Domain Name)- This is the complete address for a specific host on the internet. (Example: www.google.com) To be considered an FQDN it must have:
+  -Host Name (Example: www)
+  -Second-Level Domain (Example: google)
+  -TLD (Example: com)
+  -Root Zone (All FQDNs ends with .) (This is implied and hidden in most domains)
+
+Hosts File- This is a plaintext file on an OS that maps hostnames to a specific IP address. This functioned as the "Legacy DNS" before the DNS we know today became a thing. 
+
+TTL (Time To Live)- This is a numerical value measured in seconds that's set by an admin to determine how long a Resolver or a Browser is allowed to cache an IP.
