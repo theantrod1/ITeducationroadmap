@@ -7,7 +7,11 @@ Instead of forcing us to memorize IP addresses, DNS works invisibly in the backg
 resolution process works.
 
 DNS (Domain Name System): Responsible for resolving names to numbers. More specifically, Domain Names to IP Addresses. So if you type a website name into a search bar, DNS will
-resolve that website name into a number, because all computers only speak in numbers. DNS occurs on UDP Port 53.
+resolve that website name into a number, because all computers only speak in numbers. 
+
+DNS operates on UDP Port 53 because it is quick. Since DNS is a single query and a single response, the 3-way handshake that occurs with TCP, would be wasting time and resources.
+TCP is only used when it is larger packets that are being sent, typically the payload size is limited to 512 bytes for UDP, any larger is TCP. TCP may be used for whole zone transfers
+of a domain in which it contains all the records for a domain and can't afford to lose any packets. Modern DNS may use EDNS0 for larger UDP packets but keeps TCP as a backup.
 
 DNS isn't just a magical translation from names to addresses though, DNS takes steps:
   1. Browser/OS Cache: When you type google.com into a web browser, your web browser/OS are going to check in their cache memory to see if they have the IP address. Your OS will check 
@@ -43,3 +47,5 @@ Records
 
 DNS Zone- This is a portion of the DNS namespace that is managed by an admin/entity. It is defined by a Zone File that contains all the resource records (A, MX, CNAME, etc.) 
 for that domain.
+
+FQDN (Fully Qualified Domain Name)- This is the complete address for a specific host on the internet. (Example: www.google.com)
