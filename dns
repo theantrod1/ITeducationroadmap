@@ -79,6 +79,8 @@ Hosts File- This is a plaintext file on an OS that maps hostnames to a specific 
 
 TTL (Time To Live)- This is a numerical value measured in seconds that's set by an admin to determine how long a Resolver or a Browser is allowed to cache an IP.
 
+NXDOMAIN- Non-Existent Domain
+
 Recursive vs Iterative Queries- 
   Recursive Query: Client demands a final answer from the Resolver (Example: Either give me an IP or notify me that it doesn't exist)
   Iterative Query: Rather than scouting the internet or giving a final answer, the server will (if it doesn't know the answer) point to a server that may know the answer
