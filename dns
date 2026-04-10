@@ -45,13 +45,26 @@ Records
     SOA Record (Start of Authority): Contains essential information such as the admin's email address, last time zone was updated, and how often a secondary server should
     refresh their data.
 
+Split-Horizon DNS: A configuration where a DNS zone provides different responses based on the source of the query. Requests coming from the Internal Network resolve to a private IP, 
+while requests from the Public Internet resolve to a public IP (or are blocked). This enhances security by hiding internal network infrastructure from the outside world.
+
+Dynamic DNS (DDNS): This is a service that allows a device to update its own DNS record every time its IP address changes. If your router gets a new IP from the ISP (via DHCP), the
+router will automatically send a message to a DDNS provider to let it know, in which the DDNS provider will then update your A record to match the new IP.
 
 Caching vs Non-Caching Servers
   Caching (Recursive): Recursive Resolvers are considered "Caching" Servers because they eventually find an IP for the user and store it in its memory for the duration of the TTL.
   Non-Caching (Authoritative): These servers just hold onto the original Zone File that the IP is on.
 
-DNSSEC- Extentions that add a digital signature to DNS records to ensure that data is authentic and untampered with. DNSSEC ensures that a hacker can not perform attacks such as 
-DNS Cache Poisoning (where a hacker send a fake IP to the Resolver) by allowing the Resolver to cryptogrtaphically verify that the data originated from an Authoritative Server.
+Troubleshooting Commands:
+  -nslookup (Name System Lookup): This command tells you which DNS server you are connected to and what IP address it found. You can use it to test specific servers to let you
+  know whether the issue is the website or your ISP server (Example: nslookup google.com 8.8.8.8)
+  -ipconfig /flushdns: This wipes the computer's DNS cache. You can use it if a website changed their IP but your computer is still trying to go to the old IP. This command
+  will wipe the cache and force a new lookup.
+  -dig (Domain Information Groper): Works in the same way as nslookup but provides more detail such as the TTL and flags set on the packet. 
+
+
+DNSSEC- Extensions that add a digital signature to DNS records to ensure that data is authentic and untampered with. DNSSEC ensures that a hacker can not perform attacks such as 
+DNS Cache Poisoning (where a hacker sends a fake IP to the Resolver) by allowing the Resolver to cryptographically verify that the data originated from an Authoritative Server.
 
 DNS Zone- This is a portion of the DNS namespace that is managed by an admin/entity. It is defined by a Zone File that contains all the resource records (A, MX, CNAME, etc.) 
 for that domain.
@@ -66,9 +79,7 @@ Hosts File- This is a plaintext file on an OS that maps hostnames to a specific 
 
 TTL (Time To Live)- This is a numerical value measured in seconds that's set by an admin to determine how long a Resolver or a Browser is allowed to cache an IP.
 
-Troubleshooting Commands:
-  -nslookup (Name System Lookup): This command tells you which DNS server you are connected to and what IP address it found. You can use it to test specific servers to let you
-  know whether the issue is the website or your ISP server (Example: nslookup google.com 8.8.8.8)
-  -ipconfig /flushdns: This wipes the computer's DNS cache. You can use it if a website changed their IP but your computer is still trying to go to the old IP. This command
-  will wipe the cache and force a new lookup.
-  -dig (Domain Information Groper): Works in the same way as nslookup but provides more detail such as the TTL and flags set on the packet. 
+Recursive vs Iterative Queries- 
+  Recursive Query: Client demands a final answer from the Resolver (Example: Either give me an IP or notify me that it doesn't exist)
+  Iterative Query: Rather than scouting the internet or giving a final answer, the server will (if it doesn't know the answer) point to a server that may know the answer
+  (Root Server or TLD Server)
