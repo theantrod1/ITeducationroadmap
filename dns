@@ -78,6 +78,8 @@ Troubleshooting Commands:
 DNSSEC- Extensions that add a digital signature to DNS records to ensure that data is authentic and untampered with. DNSSEC ensures that a hacker can not perform attacks such as 
 DNS Cache Poisoning (where a hacker sends a fake IP to the Resolver) by allowing the Resolver to cryptographically verify that the data originated from an Authoritative Server.
 
+DNS Tunneling: A method used by attackers to bypass firewalls by hiding non-DNS traffic inside DNS queries.
+
 DNS Zone- This is a portion of the DNS namespace that is managed by an admin/entity. It is defined by a Zone File that contains all the resource records (A, MX, CNAME, etc.) 
 for that domain.
 
