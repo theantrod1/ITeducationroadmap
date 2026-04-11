@@ -51,6 +51,12 @@ Primary vs Secondary Zone
   -Secondary Zone: On a secondary zone/server you can not make any edits whatsoever, it is strictly read only. It gets information by copying the data from the primary zone, this
   is known as a Zone Transfer (uses Port 53). Its nmain job is load balance and redundancy. If Primary Zone crashes or goes offline, Secondary Zone can still answer DNS queries.
 
+  Zone Transfers
+    -Incremental Zone Transfers (IXFR): This is considered the more efficient way to copy a zone, the secondary server requesting specifically what has been modified since 
+    the last update.
+    -Full Zone Transfer (AXFR): This is the secondary server requesting and receiving the entirety of the entire Zone File from the primary server. This is used for primarily the
+    initial setup process or if the data is too unsynchronized for an incremental update.
+
 Split-Horizon DNS: A configuration where a DNS zone provides different responses based on the source of the query. Requests coming from the Internal Network resolve to a private IP, 
 while requests from the Public Internet resolve to a public IP (or are blocked). This enhances security by hiding internal network infrastructure from the outside world.
 
