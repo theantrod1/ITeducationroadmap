@@ -93,6 +93,9 @@ TTL (Time To Live)- This is a numerical value measured in seconds that's set by 
 
 NXDOMAIN- Non-Existent Domain
 
+RDATA (Resource Data)- This is the actual data that is being returned after the initial qquery was made. The format of the RDATA varies based on the record type. 
+(Example: For an A record, the RDATA is an IPv4 address, while for an MX record, it includes both a priority number and a mail server hostname.)
+
 Recursive vs Iterative Queries- 
   Recursive Query: Client demands a final answer from the Resolver (Example: Either give me an IP or notify me that it doesn't exist)
   Iterative Query: Rather than scouting the internet or giving a final answer, the server will (if it doesn't know the answer) point to a server that may know the answer
