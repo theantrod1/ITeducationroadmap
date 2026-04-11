@@ -96,6 +96,10 @@ FQDN (Fully Qualified Domain Name)- This is the complete address for a specific 
 
 Hosts File- This is a plaintext file on an OS that maps hostnames to a specific IP address. This functioned as the "Legacy DNS" before the DNS we know today became a thing. 
 
+Root Hints File- A file containing the IP addresses of the 13 Root Name Servers.
+
+Stub Zone- Zone that only contains the necessary records to find the Authoritative Servers.
+
 TTL (Time To Live)- This is a numerical value measured in seconds that's set by an admin to determine how long a Resolver or a Browser is allowed to cache an IP.
 
 NXDOMAIN- Non-Existent Domain
