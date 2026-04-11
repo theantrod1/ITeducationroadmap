@@ -37,6 +37,7 @@ Records
   Mail and Routing Records:
     MX Record (Mail Exchange): These are the mail servers responsible for receiving mail on behalf of the domain.
     NS Record (Name Server): These specify which DNS Servers are the Authoritative sources for a domain.
+    Wildcard Record: Special type of DNS entry that can take any undefined subdomain to a specific destination. They use an asterisk (*) at the beginning of the domain.
   Security and Information Records: 
     TXT Record (Text): Allows admins to input human or machine-readable text into DNS.
     PTR Record (Pointer): Seen as the "Reverse DNS", it maps an IP address to a domain name.
