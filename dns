@@ -88,6 +88,8 @@ regular internet traffic and avoid being blocked by filters) rather than standar
 DNS Zone- This is a portion of the DNS namespace that is managed by an admin/entity. It is defined by a Zone File that contains all the resource records (A, MX, CNAME, etc.) 
 for that domain.
 
+CNAME Flattening- Allows a CNAME at the root of a domain when typically not allowed
+
 FQDN (Fully Qualified Domain Name)- This is the complete address for a specific host on the internet. (Example: www.google.com) To be considered an FQDN it must have:
   -Host Name (Example: www)
   -Second-Level Domain (Example: google)
