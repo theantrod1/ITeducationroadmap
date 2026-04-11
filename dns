@@ -85,7 +85,7 @@ DNS Tunneling- A method used by attackers to bypass firewalls by hiding non-DNS 
 DoH (DNS over HTTPS)- A security protocol in which a DNS query is encrypted by hiding them inside HTTPS traffic. It uses the HTTPS Port 443 (this is what makes it look like
 regular internet traffic and avoid being blocked by filters) rather than standard Port 53.
 
-DoT (DNS over TLS)- A security protocol that work by wrapping DNS queries in a layer of TLS (Transport Layer Security)
+DoT (DNS over TLS)- A security protocol that work by wrapping DNS queries in a layer of TLS (Transport Layer Security). Has its own dedicated port, Port 853.
 
 DNS Zone- This is a portion of the DNS namespace that is managed by an admin/entity. It is defined by a Zone File that contains all the resource records (A, MX, CNAME, etc.) 
 for that domain.
