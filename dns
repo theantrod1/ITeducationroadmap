@@ -59,6 +59,9 @@ During zone transfers, Secondary DNS Servers pull a copy of the zone data from t
   -Full Zone Transfer (AXFR): This is the secondary server requesting and receiving the entirety of the entire Zone File from the primary server. This is used for primarily the
     initial setup process or if the data is too unsynchronized for an incremental update.
 
+Forward Lookup Zone: The most common type of DNS zone. It allows a DNS server to resolve a human-readable hostname into a machine-readable IP address. It contains records 
+like A, AAAA, MX, and CNAME.
+
 Split-Horizon DNS: A configuration where a DNS zone provides different responses based on the source of the query. Requests coming from the Internal Network resolve to a private IP, 
 while requests from the Public Internet resolve to a public IP (or are blocked). This enhances security by hiding internal network infrastructure from the outside world.
 
