@@ -2,3 +2,5 @@
 
 April 13, 2026
 
+Having built a solid understanding of how devices receive their network identities (IP Addressing & DHCP) and how we find them using human-readable names (DNS), 
+the next critical piece of the puzzle is understanding how they actually communicate. I am dedicating this log to Ports and Protocols.
