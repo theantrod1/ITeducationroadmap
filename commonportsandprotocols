@@ -15,20 +15,20 @@ as follows:
   These are ports that are common and are used by people every single day. These ports are considered the most "open" and are the most strictly monitored by IANA. 
   Examples:
     Port 21 (FTP | File Transfer Protocol): Port 21 is the primary control channel for FTP (File Transfer Protocol), used to send commands like "login," "list," and "download" 
-    between a client and a server. It works in tandem with Port 20, which handles the actual transfer of the data bits. Because it transmits credentials in plain text, it is considered 
-    insecure and has largely been replaced by SFTP (Port 22) in modern IT environments.
+    between a client and a server. It works in tandem with Port 20, which handles the actual transfer of the data bits. Because it transmits credentials in plain text, it is 
+    considered insecure and has largely been replaced by SFTP (Port 22) in modern IT environments.
 
     Port 25 (SMTP | Simple Mail Transfer Protocol): The standard port used for transferring email between mail servers (relaying). While it is the backbone of email delivery, it is 
     often blocked on residential networks and by firewalls to prevent spam, with encrypted ports like 587 preferred for end-user email submission.
 
-    Port 53 (DNS | Domain Name System): The port dedicated to the Domain Name System. It translates human-readable domain names into IP addresses. It primarily uses UDP for fast client 
-    queries but switches to TCP for zone transfers or when data exceeds the size limit of a standard UDP packet.
+    Port 53 (DNS | Domain Name System): The port dedicated to the Domain Name System. It translates human-readable domain names into IP addresses. It primarily uses UDP for fast 
+    client queries but switches to TCP for zone transfers or when data exceeds the size limit of a standard UDP packet.
 
-    Port 67 (DHCP | Dynamic Host Configuration Protocol): Port 67 (DHCP Server): The destination port used by DHCP servers to receive requests from clients. It works along with Port 68 
-    (client-side) to facilitate the automatic assignment of IP addresses, subnet masks, and default gateways using the UDP protocol.
+    Port 67 (DHCP | Dynamic Host Configuration Protocol): Port 67 (DHCP Server): The destination port used by DHCP servers to receive requests from clients. It works along with 
+    Port 68 (client-side) to facilitate the automatic assignment of IP addresses, subnet masks, and default gateways using the UDP protocol.
 
-    Port 443: The standard port for secure, encrypted web traffic. It utilizes SSL/TLS to encrypt communications between a web browser and a server, ensuring data privacy and integrity. 
-    It is the secure successor to Port 80 and is the backbone of modern secure internet communication.
+    Port 443: The standard port for secure, encrypted web traffic. It utilizes SSL/TLS to encrypt communications between a web browser and a server, ensuring data privacy and 
+    integrity. It is the secure successor to Port 80 and is the backbone of modern secure internet communication.
 
 1024-49151 User/Registered Ports
 
