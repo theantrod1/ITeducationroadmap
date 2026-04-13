@@ -4,3 +4,14 @@ April 13, 2026
 
 Having built a solid understanding of how devices receive their network identities (IP Addressing & DHCP) and how we find them using human-readable names (DNS), 
 the next critical piece of the puzzle is understanding how they actually communicate. I am dedicating this log to Ports and Protocols.
+
+Port: A port is a logical connection (not a physical one) that identifies a specific process or service that is running on a computer.
+
+
+
+
+0-1023 System/Well-Known Ports
+
+1024-49151 User/Registered Ports
+
+49152-65535 Dynamic/Private Ports
