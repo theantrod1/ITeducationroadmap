@@ -39,5 +39,14 @@ as follows:
 
       Port 1812 (RADIUS | Remote Authentication Dial-In User Service): This is the main Port utilized for network authentication. Used as centralized management for anyone trying to
       connect to a network service like company Wi-Fi or a VPN. UDP is used to ensure speed and is the backbone behind secure per-user access control in company environments.
+
+      Port 3389 (RDP | Remote Desktop Protocol): This is the default Port for Microsoft's Desktop Control. It provides the a GUI (Graphical User Interface) for remote management
+      of Windows-based systems. This is a very commonly attacked port so it typically only has internal access or requires a VPN to access.
+
+      Port 5060 (SIP | Session Initiation Protocol): This is thw default port that is used in SIP to be able to be used in VoIP systems. It manages call signaling, such as initiating, 
+      maintaining, and terminating voice or video calls. While 5060 is unencrypted, Port 5061 is used for secure, encrypted SIP (SIPS).
+
+      Port 8080 (Port 80 Alternative): This is commonly seen as the Port 80 (HTTP) backup port, or the HTTP Alternate. It's essentially a "test" version of Port 80. It is frequently 
+      utilized for web proxy services, caching, or for running secondary web applications on a single server.
   
   49152-65535 Dynamic/Private Ports
