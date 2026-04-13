@@ -5,12 +5,14 @@ April 13, 2026
 Having built a solid understanding of how devices receive their network identities (IP Addressing & DHCP) and how we find them using human-readable names (DNS), 
 the next critical piece of the puzzle is understanding how they actually communicate. I am dedicating this log to Ports and Protocols.
 
-Port: A port is a logical connection (not a physical one) that identifies a specific process or service that is running on a computer, used to exchange information. Ports determine
-what programs and services will be used by the computer.
+Port: A logical connection (not physical) that identifies a specific process or service running on a computer/server. Ports determine what programs and services will be used by the 
+computer/server. Ports are associated with an IP address and both work together to exchange data on a network; IP address gets data to the device, Ports ensure they reach the correct
+application. Together they form a Socket.
 
-
-
+Ports have unique numbers that identify them ranging from 0 - 65,535 assigned by IANA (Internet Assigned Numbers Authority) .This range is then split even further into 3 categories 
+as follows:
 0-1023 System/Well-Known Ports
+  These are ports that are common and are used by people every single day. 
 
 1024-49151 User/Registered Ports
 
