@@ -11,8 +11,8 @@ application. Together they form a Socket.
 
 Ports have unique numbers that identify them ranging from 0 - 65,535 assigned by IANA (Internet Assigned Numbers Authority) .This range is then split even further into 3 categories 
 as follows:
-  0-1023 System/Well-Known Ports
-    These are ports that are common and are used by people every single day. These ports are considered the most "open" and are the most strictly monitored by IANA. 
+  0-1023 System/Well-Known Ports: These are ports that are common and are used by people every single day. These ports are considered the most "open" and are the most strictly 
+  monitored by IANA. 
     Examples:
       Port 21 (FTP | File Transfer Protocol): Port 21 is the primary control channel for FTP (File Transfer Protocol), used to send commands like "login," "list," and "download" 
       between a client and a server. It works in tandem with Port 20, which handles the actual transfer of the data bits. Because it transmits credentials in plain text, it is 
@@ -31,8 +31,13 @@ as follows:
       and a server, ensuring data privacy and integrity. It is the secure successor to Port 80 and is the backbone of modern secure internet communication.
   
   
-  1024-49151 User/Registered Ports
-  
-  
+  1024-49151 User/Registered Ports: These are typically used for non-core system processes like database communication (SQL), remote desktop (RDP), and VoIP. They do not usually 
+  require administrative privileges to use on a client machine but are critical for firewall configuration.
+    Examples:
+      Port 1433 (MS SQL Server): This is the software engine powering many different corporate/company applications such as payroll systems or customer data bases. To exchange
+      data securely between different apps and the database system, TCP is used.
+
+      Port 1812 (RADIUS | Remote Authentication Dial-In User Service): This is the main Port utilized for network authentication. Used as centralized management for anyone trying to
+      connect to a network service like company Wi-Fi or a VPN. UDP is used to ensure speed and is the backbone behind secure per-user access control in company environments.
   
   49152-65535 Dynamic/Private Ports
