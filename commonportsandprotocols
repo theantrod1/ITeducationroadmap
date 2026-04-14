@@ -49,4 +49,9 @@ as follows:
       Port 8080 (Port 80 Alternative): This is commonly seen as the Port 80 (HTTP) backup port, or the HTTP Alternate. It's essentially a "test" version of Port 80. It is frequently 
       utilized for web proxy services, caching, or for running secondary web applications on a single server.
   
-  49152-65535 Dynamic/Private Ports
+  49152-65535 Dynamic/Private Ports: These are also known as Ephemeral Ports and are the temporary "return addresses" when you start a connection. Your computer picks a number from
+  this range so the server knows where to send data back to.
+    Examples:
+      There are no specific ports that stand out/are more important than other ones because the idea is that the computer will choose one of the numbers within this range at random.
+      So it might open a tab on Google using Port 51002, then open a second tab using Port 51003
+
