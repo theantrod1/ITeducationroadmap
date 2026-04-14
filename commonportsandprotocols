@@ -55,3 +55,12 @@ as follows:
       There are no specific ports that stand out/are more important than other ones because the idea is that the computer will choose one of the numbers within this range at random.
       So it might open a tab on Google using Port 51002, then open a second tab using Port 51003
 
+TCP/UDP
+TCP vs. UDP: The two main protocols at Layer 4 (Transport). TCP provides reliable, ordered, and error-checked delivery of data via a three-way handshake, making it ideal for web and 
+file traffic. UDP provides a faster, low-overhead "fire and forget" delivery, making it ideal for real-time traffic like DNS or VoIP where speed outweighs occasional data loss.
+
+Port Forwarding- Service that allows external device reach internal devices inside a private local network. The standard for a router is to block all unsolicited traffic trying
+to get into your network. However, with Port Forwarding, it allows traffic on certain ports to have access into your network, by directing traffic from a specific external port
+to designated IP address.
+
+Socket- Combination of IP address and Port number represented as "192.161.1.10:80".
