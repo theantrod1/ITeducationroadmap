@@ -67,6 +67,23 @@ netstat Command: This is a CLI display command used to display active TCP and UD
     -netstat -n: Displays IP addresses and ports in numerical format
     -netstat -o: Shows the Process ID (PID): Tells you which app is using a certain port.
 
+
+Other Ports
+  -Port 22 (SSH | Secure Shell): This port is used for remote command-line access and is considered secure. This is because it encrypts the data before sending it out therefore
+   ensuring that even if someone intercepts the message, it won't be intelligible.
+    -Port 23 (Telnet): This port is also used for remote command-line access. This port is considered "insecure" because it sends all data in plaintext, incuding usernames and 
+     passwords. If a message is intercepted, instantly all the information that was displayed on that transmission is at risk. (Man-in-the-Middle Attacks)
+  -Port 80 (HTTP | Hypertext Transfer Protocol): This port is the standard for when it comes to sending unencrypted data. This is the less secure alternative to Port 443.
+  -Port 110 (POP3 | Post Offer Protocol version 3): Used by email clients to retrieve (download) emails from a mail server to your local device. It, like Port 23 and Port 80, is 
+   insecure and sends data in plaintext.
+  -Port 161
+  -Port 995 (POP3S | Post Offer Protocol version 3 Secure): provides the same functionality as POP3 but adds a layer of SSL/TLS encryption, ensuring that the communication between 
+   the mail server and the client is private and secure.
+  -Port 3389 (RDP | Remote Desktop Protocol): Microsoft protocol that allows another user to control a computer over a network connection. This protocol allows access to all
+   host's files and applications.
+
+
+
 Port Forwarding- Service that allows external device reach internal devices inside a private local network. The standard for a router is to block all unsolicited traffic trying
 to get into your network. However, with Port Forwarding, it allows traffic on certain ports to have access into your network, by directing traffic from a specific external port
 to designated IP address.
