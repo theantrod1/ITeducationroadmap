@@ -80,6 +80,8 @@ Other Important Ports
    Port 143 is the standard unencrypted port for this service.
   -Port 161 (SNMP | Simple Network Management Protocol): allows a management console to collect performance data (like temperature, bandwidth usage, and error rates) from routers, 
    switches, and other hardware to ensure the network is running smoothly.
+  -Port 445 (SMB | Simple Message Block): A Microsoft protocol used for file and printer sharing, as well as Active Directory domain services. It allows for direct communication 
+   between devices for resource sharing.
   -Port 995 (POP3S | Post Offer Protocol version 3 Secure): provides the same functionality as POP3 but adds a layer of SSL/TLS encryption, ensuring that the communication between 
    the mail server and the client is private and secure.
   -Port 3389 (RDP | Remote Desktop Protocol): Microsoft protocol that allows another user to control a computer over a network connection. This protocol allows access to all
