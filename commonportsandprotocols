@@ -81,8 +81,8 @@ Other Important Ports
    Port 143 is the standard unencrypted port for this service.
   -Port 161 (SNMP | Simple Network Management Protocol): allows a management console to collect performance data (like temperature, bandwidth usage, and error rates) from routers, 
    switches, and other hardware to ensure the network is running smoothly.
-  -Port 389: Standard port for the Lightweight Directory Access Protocol. It is used to access and maintain distributed directory information services, such as Microsoft Active 
-   Directory.
+  -Port 389 (LDAP | Lightweight Directory Access Protocol): Standard port for the Lightweight Directory Access Protocol. It is used to access and maintain distributed directory 
+   information services, such as Microsoft Active Directory.
   -Port 445 (SMB | Simple Message Block): A Microsoft protocol used for file and printer sharing, as well as Active Directory domain services. It allows for direct communication 
    between devices for resource sharing.
   -Port 995 (POP3S | Post Offer Protocol version 3 Secure): provides the same functionality as POP3 but adds a layer of SSL/TLS encryption, ensuring that the communication between 
