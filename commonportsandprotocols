@@ -58,7 +58,7 @@ as follows:
 
 TCP/UDP
 TCP vs. UDP: The two main protocols at Layer 4 (Transport). TCP provides reliable, ordered, and error-checked delivery of data via a three-way handshake, making it ideal for web and 
-file traffic. UDP provides a faster, low-overhead "fire and forget" delivery, making it ideal for real-time traffic like DNS or VoIP where speed outweighs occasional data loss.
+file traffic. UDP provides a faster, low-overhead "fire and forget" delivery,   making it ideal for real-time traffic like DNS or VoIP where speed outweighs occasional data loss.
 
 
 netstat Command: This is a CLI display command used to display active TCP and UDP connections (Ports that the computer is actively listening for).
@@ -68,7 +68,7 @@ netstat Command: This is a CLI display command used to display active TCP and UD
     -netstat -o: Shows the Process ID (PID): Tells you which app is using a certain port.
 
 
-Other Ports
+Other Important Ports
   -Port 22 (SSH | Secure Shell): This port is used for remote command-line access and is considered secure. This is because it encrypts the data before sending it out therefore
    ensuring that even if someone intercepts the message, it won't be intelligible.
     -Port 23 (Telnet): This port is also used for remote command-line access. This port is considered "insecure" because it sends all data in plaintext, incuding usernames and 
@@ -76,7 +76,8 @@ Other Ports
   -Port 80 (HTTP | Hypertext Transfer Protocol): This port is the standard for when it comes to sending unencrypted data. This is the less secure alternative to Port 443.
   -Port 110 (POP3 | Post Offer Protocol version 3): Used by email clients to retrieve (download) emails from a mail server to your local device. It, like Port 23 and Port 80, is 
    insecure and sends data in plaintext.
-  -Port 161
+  -Port 161 (SNMP | Simple Network Management Protocol): allows a management console to collect performance data (like temperature, bandwidth usage, and error rates) from routers, 
+   switches, and other hardware to ensure the network is running smoothly.
   -Port 995 (POP3S | Post Offer Protocol version 3 Secure): provides the same functionality as POP3 but adds a layer of SSL/TLS encryption, ensuring that the communication between 
    the mail server and the client is private and secure.
   -Port 3389 (RDP | Remote Desktop Protocol): Microsoft protocol that allows another user to control a computer over a network connection. This protocol allows access to all
