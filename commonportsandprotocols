@@ -69,10 +69,11 @@ netstat Command: This is a CLI display command used to display active TCP and UD
 
 
 Other Important Ports
-  -Port 22 (SSH | Secure Shell): This port is used for remote command-line access and is considered secure. This is because it encrypts the data before sending it out therefore
-   ensuring that even if someone intercepts the message, it won't be intelligible.
-    -Port 23 (Telnet): This port is also used for remote command-line access. This port is considered "insecure" because it sends all data in plaintext, incuding usernames and 
-     passwords. If a message is intercepted, instantly all the information that was displayed on that transmission is at risk. (Man-in-the-Middle Attacks)
+  -Port 22 (SSH | Secure Shell | SFTP | Secure File Transfer Protocol): This port is used for remote command-line access and is considered secure. This is because it encrypts the 
+   data before sending it out therefore ensuring that even if someone intercepts the message, it won't be intelligible. A secure method for transferring files between a client 
+   and a server. It leverages the SSH protocol to provide encryption and authentication
+  -Port 23 (Telnet): This port is also used for remote command-line access. This port is considered "insecure" because it sends all data in plaintext, incuding usernames and 
+   passwords. If a message is intercepted, instantly all the information that was displayed on that transmission is at risk. (Man-in-the-Middle Attacks)
   -Port 80 (HTTP | Hypertext Transfer Protocol): This port is the standard for when it comes to sending unencrypted data. This is the less secure alternative to Port 443.
   -Port 110 (POP3 | Post Offer Protocol version 3): Used by email clients to retrieve (download) emails from a mail server to your local device. It, like Port 23 and Port 80, is 
    insecure and sends data in plaintext.
@@ -80,6 +81,8 @@ Other Important Ports
    Port 143 is the standard unencrypted port for this service.
   -Port 161 (SNMP | Simple Network Management Protocol): allows a management console to collect performance data (like temperature, bandwidth usage, and error rates) from routers, 
    switches, and other hardware to ensure the network is running smoothly.
+  -Port 389: Standard port for the Lightweight Directory Access Protocol. It is used to access and maintain distributed directory information services, such as Microsoft Active 
+   Directory.
   -Port 445 (SMB | Simple Message Block): A Microsoft protocol used for file and printer sharing, as well as Active Directory domain services. It allows for direct communication 
    between devices for resource sharing.
   -Port 995 (POP3S | Post Offer Protocol version 3 Secure): provides the same functionality as POP3 but adds a layer of SSL/TLS encryption, ensuring that the communication between 
