@@ -76,6 +76,8 @@ Other Important Ports
   -Port 80 (HTTP | Hypertext Transfer Protocol): This port is the standard for when it comes to sending unencrypted data. This is the less secure alternative to Port 443.
   -Port 110 (POP3 | Post Offer Protocol version 3): Used by email clients to retrieve (download) emails from a mail server to your local device. It, like Port 23 and Port 80, is 
    insecure and sends data in plaintext.
+  -Port 143: protocol used for retrieving emails that keeps the mail stored on the server. This allows for seamless synchronization across multiple devices (phone, laptop, tablet). 
+   Port 143 is the standard unencrypted port for this service.
   -Port 161 (SNMP | Simple Network Management Protocol): allows a management console to collect performance data (like temperature, bandwidth usage, and error rates) from routers, 
    switches, and other hardware to ensure the network is running smoothly.
   -Port 995 (POP3S | Post Offer Protocol version 3 Secure): provides the same functionality as POP3 but adds a layer of SSL/TLS encryption, ensuring that the communication between 
@@ -84,9 +86,12 @@ Other Important Ports
    host's files and applications.
 
 
-
 Port Forwarding- Service that allows external device reach internal devices inside a private local network. The standard for a router is to block all unsolicited traffic trying
 to get into your network. However, with Port Forwarding, it allows traffic on certain ports to have access into your network, by directing traffic from a specific external port
 to designated IP address.
+
+Port Triggering- This is a service that essentially opens a Port only when an internal device is communicating outward, then once communication is finished, the port is closed.
+Port Triggering is dynamic and can have a service running on multiple computers (only one at a time), as opposed to Port Forwarding which is static and can only be run on the 
+computer it was initially setup on. It's seen essentially as a more secure version of Port Forwarding.
 
 Socket- Combination of IP address and Port number represented as "192.161.1.10:80".
