@@ -1,0 +1,6 @@
+#troubleshootingcommands
+
+April 18, 2026
+
+Understanding IP addressing and DNS is just the theory; the command line is the actual practice. This log covers the core network troubleshooting commands required on the 
+helpdesk to isolate connectivity issues, test DNS resolution, and see exactly what traffic is moving through a machine.
