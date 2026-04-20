@@ -8,7 +8,8 @@ helpdesk to isolate connectivity issues, test DNS resolution, and see exactly wh
 IPCONFIG: Basic command that displays IP Address, Subnet Mask, and Default Gateway.
   Although ipconfig is a very basic command, there are a various set of flags (also called switches or parameters) that can enhance the extent of what the ipconfig command displays.
   Examples:
-  /all: This flag displays a complete overview of network configuration, including: MAC address, 
+  /all: This flag displays a complete overview of network configuration, including: MAC address, DNS and DHCP servers, and the DHCP Lease expiration.
+  /release: 
 
 PING: 
 
