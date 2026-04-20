@@ -6,7 +6,9 @@ Understanding IP addressing and DNS is just the theory; the command line is the 
 helpdesk to isolate connectivity issues, test DNS resolution, and see exactly what traffic is moving through a machine.
 
 IPCONFIG: Basic command that displays IP Address, Subnet Mask, and Default Gateway.
-
+  Although ipconfig is a very basic command, there are a various set of flags (also called switches or parameters) that can enhance the extent of what the ipconfig command displays.
+  Examples:
+  /all: This flag displays a complete overview of network configuration, including: MAC address, 
 
 PING: 
 
