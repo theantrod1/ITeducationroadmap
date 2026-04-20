@@ -5,16 +5,59 @@ April 18, 2026
 Understanding IP addressing and DNS is just the theory; the command line is the actual practice. This log covers the core network troubleshooting commands required on the 
 helpdesk to isolate connectivity issues, test DNS resolution, and see exactly what traffic is moving through a machine.
 
-IPCONFIG: Basic command that displays IP Address, Subnet Mask, and Default Gateway.
-  Although ipconfig is a very basic command, there are a various set of flags (also called switches or parameters) that can enhance the extent of what the ipconfig command displays.
-  Examples:
-  /all: This flag displays a complete overview of network configuration, including: MAC address, DNS and DHCP servers, and the DHCP Lease expiration.
-  /release: 
+  IPCONFIG: Basic command that displays IP Address, Subnet Mask, and Default Gateway.
+    Although ipconfig is a very basic command, there are a various set of flags (also called switches or parameters) that can enhance the extent of what the ipconfig command displays.
+    Flags:
+    /all: This flag displays a complete overview of network configuration, including: MAC address, DNS and DHCP servers, and the DHCP Lease expiration.
+    /release: This flag manually drops the current IP address lease from the DHCP server
+    /renew: Manually requests a new IP address from the DHCP server.
+    /flushdns: Purges the local DNS resolver cache, forcing the system to re-request updated DNS records.
+  
+  
+  PING: This is known as the "Echo" command and is used to see if a device on a network is active and listening, sends out ICMP Echo Requests and waits for an ICMP Echo Reply. If a
+  device replies, that means it's online.
+    Flags: 
+    -t (Continuous Ping): Typically ping will stop trying after 4 attempts, however this flag will make the ping continue until you input Ctrl + C.
+    -a (Resolve Address): This command translates an IP address into a friendly Hostname.
+    -n [count] (Set Number of Echoes): Sends a specific number of requests rather than just 4.
+    -l [size] (Packet Size): User can manually set the packet size in bytes.
+  
+  
+  TRACERT (TRACEROUTE): Command used to see the exact route that packets used to arrive there.
+    Flags:
+    -d (Don't Resolve Addresses): This prevents the traceroute command from obtaining the Hostnames, it only shows IP addresses.
+    -h [max_hops] (Maximum Hops): This specifies the maximum number of hops to check before giving up. (Default is 30)
+    -w [timeout] (Wait Timeout): Sets amount of time in milliseconds to wait for a reply from each hop before giving up.
 
-PING: 
+  PATHPING: Command that combines the functions of Ping and Traceroute. It traces the route to a destination and then spends several minutes collecting statistics on packet loss for 
+  every single hop.
+    -n (Don't Resolve Name Addresses): Prevents tool from looking up hostnames for each router
+    -h [hop_max] (Maximum Hops): Specifies the maximum number of hops to check before giving up.
+    -p [period] (Wait Period): Sets the number of milliseconds to wait between consecutive pings.
+    -q [queries] (Number of Queries): Sets the number of queries to each hop along the path.
+  
+  
+  NSLOOKUP: Primary tool for testing and troubleshooting DNS query the "phonebook of the internet" to see if names are being translated into IP addresses correctly.
+    Use Cases:
+    -Forward Lookup (nslookup google.com): Used to resolve an Domain name to an IP address.
+    -Reverse Lookup (nslookup 8.8.8.8): Used to resolve an IP address to a Domain name.
+    -DNS Server Testing (nslookup google.com 1.1.1.1): If your DNS is operating slowly, you can point it at another DNS server.
+  
+  
+  NETSTAT: Command you use to see every active conversation your computer is currently over the network.
+    Flags:
+    -a (All): Displays all the active TCP/UDP ports on which the computer is listening
+    -n (Numerical): Forces the command to show the IP addresses and port numbers as numbers rather than try to determine their names, making the command run faster.
+    -o (Process ID): This command display the Process ID for each connection. (You can then see what is the app for that process ID in an app like 'Task Managaer'.
+    -p [protocol]: Filters the results to show only connections for a specific protocol
 
-TRACEROUTE
+  TASKLIST: Utility used to view all active processes on a local or remote machine. It is primarily used to find the PID of a program so it can be managed or terminated.
+    Flags:
+    /v: Verbose mode; shows window titles and status.
+    /svc: Lists services hosted in each process.
 
-NSLOOKUP
-
-NETSTAT
+  TASKKILL: A utility used to end tasks or processes by their name or Process ID (PID).
+    Flags:
+    /F: Forces the process to close immediately.
+    /PID [number]: Specifies the exact process to kill.
+    /IM [name]: Specifies the image name to kill.
