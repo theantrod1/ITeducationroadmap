@@ -50,11 +50,15 @@ helpdesk to isolate connectivity issues, test DNS resolution, and see exactly wh
     -n (Numerical): Forces the command to show the IP addresses and port numbers as numbers rather than try to determine their names, making the command run faster.
     -o (Process ID): This command display the Process ID for each connection. (You can then see what is the app for that process ID in an app like 'Task Managaer'.
     -p [protocol]: Filters the results to show only connections for a specific protocol
+    -r (Routing Table): Displays the current routing table for the machine.
+
 
   TASKLIST: Utility used to view all active processes on a local or remote machine. It is primarily used to find the PID of a program so it can be managed or terminated.
     Flags:
-    /v: Verbose mode; shows window titles and status.
-    /svc: Lists services hosted in each process.
+    /m (Modules): Displays all processes currently using a specific DLL or module.
+    /v (Verbose): Shows window titles and status.
+    /svc (Services): Lists services hosted in each process.
+
 
   TASKKILL: A utility used to end tasks or processes by their name or Process ID (PID).
     Flags:
