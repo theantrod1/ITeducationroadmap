@@ -17,11 +17,11 @@ helpdesk to isolate connectivity issues, test DNS resolution, and see exactly wh
   PING: This is known as the "Echo" command and is used to see if a device on a network is active and listening, sends out ICMP Echo Requests and waits for an ICMP Echo Reply. If a
   device replies, that means it's online.
     Flags: 
-    -t (Continuous Ping): Typically ping will stop trying after 4 attempts, however this flag will make the ping continue until you input Ctrl + C.
-    -a (Resolve Address): This command translates an IP address into a friendly Hostname.
-    -n [count] (Set Number of Echoes): Sends a specific number of requests rather than just 4.
+    -a (Resolve Address): This command translates an IP address into a friendly Hostname.   
     -l [size] (Packet Size): User can manually set the packet size in bytes.
-  
+    -n [count] (Set Number of Echoes): Sends a specific number of requests rather than just 4. 
+    -t (Continuous Ping): Typically ping will stop trying after 4 attempts, however this flag will make the ping continue until you input Ctrl + C.
+
   
   TRACERT (TRACEROUTE): Command used to see the exact route that packets used to arrive there.
     Flags:
@@ -50,6 +50,7 @@ helpdesk to isolate connectivity issues, test DNS resolution, and see exactly wh
     -a (All): Displays all the active TCP/UDP ports on which the computer is listening.
     -b (Executable): Displays the executable file name associated with each connection or listening port.
     -e (Ethernet Statistics): Displays a summary of total traffic (bytes and packets) sent and received over the network interface.
+    -f (FQDN): Shows the complete, absolute domain name for every remote connection
     -n (Numerical): Forces the command to show the IP addresses and port numbers as numbers rather than try to determine their names, making the command run faster.
     -o (Process ID): This command display the Process ID for each connection. (You can then see what is the app for that process ID in an app like 'Task Managaer'.)
     -p [protocol]: Filters the results to show only connections for a specific protocol
@@ -60,7 +61,8 @@ helpdesk to isolate connectivity issues, test DNS resolution, and see exactly wh
   TASKLIST: Utility used to view all active processes on a local or remote machine. It is primarily used to find the PID of a program so it can be managed or terminated.
     Flags:
     /m (Modules): Displays all processes currently using a specific DLL or module.
-    /v (Verbose): Shows window titles and status.
+    /s (System): Used to connect to a remote computer to view its active process list.
+    /v (Verbose): Shows window titles, status, session names, and usernames.
     /svc (Services): Lists services hosted in each process.
 
 
