@@ -29,6 +29,7 @@ helpdesk to isolate connectivity issues, test DNS resolution, and see exactly wh
     -h [max_hops] (Maximum Hops): This specifies the maximum number of hops to check before giving up. (Default is 30)
     -w [timeout] (Wait Timeout): Sets amount of time in milliseconds to wait for a reply from each hop before giving up.
 
+
   PATHPING: Command that combines the functions of Ping and Traceroute. It traces the route to a destination and then spends several minutes collecting statistics on packet loss for 
   every single hop.
     -n (Don't Resolve Name Addresses): Prevents tool from looking up hostnames for each router
@@ -46,11 +47,14 @@ helpdesk to isolate connectivity issues, test DNS resolution, and see exactly wh
   
   NETSTAT: Command you use to see every active conversation your computer is currently over the network.
     Flags:
-    -a (All): Displays all the active TCP/UDP ports on which the computer is listening
+    -a (All): Displays all the active TCP/UDP ports on which the computer is listening.
+    -b (Executable): Displays the executable file name associated with each connection or listening port.
+    -e (Ethernet Statistics): Displays a summary of total traffic (bytes and packets) sent and received over the network interface.
     -n (Numerical): Forces the command to show the IP addresses and port numbers as numbers rather than try to determine their names, making the command run faster.
-    -o (Process ID): This command display the Process ID for each connection. (You can then see what is the app for that process ID in an app like 'Task Managaer'.
+    -o (Process ID): This command display the Process ID for each connection. (You can then see what is the app for that process ID in an app like 'Task Managaer'.)
     -p [protocol]: Filters the results to show only connections for a specific protocol
     -r (Routing Table): Displays the current routing table for the machine.
+    -s (Statistics): Displays detailed per-protocol statistics for IPv4, IPv6, ICMP, TCP, and UDP.
 
 
   TASKLIST: Utility used to view all active processes on a local or remote machine. It is primarily used to find the PID of a program so it can be managed or terminated.
