@@ -1,3 +1,30 @@
 #troubleshootingphysicalhardware
 
 April 22, 2026
+
+You cannot fix a network if the machine itself won't turn on. Having built a strong foundation in command-line diagnostics, I am stepping away from the terminal for this log 
+to focus entirely on the physical side of IT: diagnosing, troubleshooting, and repairing Physical Hardware.
+
+CORE INTERNAL COMPONENTS
+CPU
+
+RAM
+
+STORAGE (SSD/HDD)
+
+MOTHERBOARD
+
+POWER AND BOOT DIAGNOSTICS
+POWER SUPPLY UNIT (PSU)
+
+POST (POWER ON SELF-TEST)
+
+EXTERNAL PORTS AND CABLES
+VIDEO CONNECTIONS
+
+PERIPHERAL PORTS
+
+NETWORK (RJ-45 ETHERNET PORT)
+
+TECHNICIAN TOOLKIT AND SAFETY
+ESD (ELECTROSTATIC DISCHARGE)
