@@ -7,9 +7,10 @@ to focus entirely on the physical side of IT: diagnosing, troubleshooting, and r
 
 CORE INTERNAL COMPONENTS
   CPU (Central Processing Unit): The CPU is one of the most integral pieces to the build and often has the same issues occur, typically involving: Heat, Power, and Contact.
-    Heat
-    -Modern CPUs have safety measures built into them called 'Thermal Throttling' that intentionally slows it down to generate less heat after reaching a certain temperature
-    (Typically between 90-100 degrees Celsius; 194-212 degrees Farenheit). If the CPU hits its T-Junction limit, it will shut down automatically to avoid melting. 
+    Heat: Modern CPUs have safety measures built into them called 'Thermal Throttling' that intentionally slows it down to generate less heat after reaching a certain temperature 
+    (Typically between 90-100 degrees Celsius or 194-212 degrees Farenheit). If the CPU hits its T-Junction limit, it will shut down automatically to avoid melting.
+      Troubleshooting: 
+    Power: 
 
   RAM (Random Access Memory):
 
