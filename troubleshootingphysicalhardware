@@ -6,25 +6,28 @@ You cannot fix a network if the machine itself won't turn on. Having built a str
 to focus entirely on the physical side of IT: diagnosing, troubleshooting, and repairing Physical Hardware.
 
 CORE INTERNAL COMPONENTS
-CPU
+  CPU (Central Processing Unit): The CPU is one of the most integral pieces to the build and often has the same issues occur, typically involving: Heat, Power, and Contact.
+    Heat
+    -Modern CPUs have safety measures built into them called 'Thermal Throttling' that intentionally slows it down to generate less heat after reaching a certain temperature
+    (Typically between 90-100 degrees Celsius; 194-212 degrees Farenheit). If the CPU hits its T-Junction limit, it will shut down automatically to avoid melting. 
 
-RAM
+  RAM (Random Access Memory):
 
-STORAGE (SSD/HDD)
+  STORAGE (SSD/HDD)
 
-MOTHERBOARD
+  MOTHERBOARD
 
 POWER AND BOOT DIAGNOSTICS
-POWER SUPPLY UNIT (PSU)
+  POWER SUPPLY UNIT (PSU)
 
-POST (POWER ON SELF-TEST)
+  POST (POWER ON SELF-TEST)
 
 EXTERNAL PORTS AND CABLES
-VIDEO CONNECTIONS
+  VIDEO CONNECTIONS
 
-PERIPHERAL PORTS
+  PERIPHERAL PORTS
 
-NETWORK (RJ-45 ETHERNET PORT)
+  NETWORK (RJ-45 ETHERNET PORT)
 
 TECHNICIAN TOOLKIT AND SAFETY
-ESD (ELECTROSTATIC DISCHARGE)
+  ESD (ELECTROSTATIC DISCHARGE)
