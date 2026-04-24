@@ -7,14 +7,33 @@ to focus entirely on the physical side of IT: diagnosing, troubleshooting, and r
 
 CORE INTERNAL COMPONENTS
   CPU (Central Processing Unit): The CPU is one of the most integral pieces to the build and often has the same issues occur, typically involving: Heat, Power, and Contact.
-    Heat: Modern CPUs have safety measures built into them called 'Thermal Throttling' that intentionally slows it down to generate less heat after reaching a certain temperature 
+
+    HEAT: Modern CPUs have safety measures built into them called 'Thermal Throttling' that intentionally slows it down to generate less heat after reaching a certain temperature 
     (Typically between 90-100 degrees Celsius or 194-212 degrees Farenheit). If the CPU hits its T-Junction limit, it will shut down automatically to avoid melting.
-      Troubleshooting: 
-    Power: 
+      TROUBLESHOOTING: If the PC shuts down, touch the heat sink. If it's cold but the CPU is reporting high temperaturess, the heat isn't transferring (bad paste). If it’s burning 
+      hot, the fan is failing or the airflow is blocked.
 
-  RAM (Random Access Memory):
+    POWER: Troubleshooting CPU power usually involves checking the dedicated electrical path from the PSU to the Motherboard VRMs (Voltage Regulator Modules).
+      TROUBLESHOOTING: The EPS 12V Connector: Most modern CPUs require a dedicated 4-pin or 8-pin (4+4) power cable plugged into the top-left of the motherboard. Without this, the 
+      system will often spin its fans but never display an image. In the CPU socket, specific pins are dedicated solely to power and grounding. If these are bent or dirty, the CPU 
+      may receive inconsistent voltage, leading to "random" shutdowns that are hard to replicate.
 
-  STORAGE (SSD/HDD)
+    CONTACT: Pins are on the motherboard. They are extremely fragile. One bent pin can prevent the "memory controller" from seeing your RAM or stop the PC from booting entirely. 
+      TROUBLESHOOTING: Every CPU has a small gold triangle in one corner. This must line up with the triangle on the socket. Misalignment leads to crushed pins and permanent 
+      hardware death.
+    
+
+  RAM (Random Access Memory): Troubleshooting RAM issues typically come by focusing on physical seating, memory corruption, compatibility and speed issues. RAM is often a culprit 
+  in "ghost" issues that appear and disappear without warning.
+    PHYSICAL CONNECTION: RAM sticks can slide out of their slots over time due to heat expansion or vibration which will cause POST to fail.
+      TROUBLESHOOTING: RAM requires pressure in order to snap correctly into place. If it hasn't snapped into place it may be only making partial contact which can cause 
+      intermittent crashes. Most motherboards have four slots. To run in "Dual-Channel" (for better performance), sticks usually need to be in slots 2 and 4 (or 1 and 3). Check the 
+      motherboard manual; placing them side-by-side often causes stability issues. Sometimes the RAM is fine, but the motherboard slot is dead.
+    
+    MEMORY CORRUPTION: 
+    
+
+  STORAGE (SSD/HDD): 
 
   MOTHERBOARD
 
