@@ -76,7 +76,9 @@ CORE INTERNAL COMPONENTS
         there are any of these issues then the board is electrically unstable and the it must be replaced. Another factor that may cause issues is ensuring the motherboard is mounted 
         on brass standoffs. If the back of the motherboard touches the metal computer case directly, it creates a "short circuit" that prevents the PC from turning on.
 
-    FIRMWARE & CONFIGURATION (BIOS/UEFI):  
+    FIRMWARE & CONFIGURATION (BIOS/UEFI): Symptoms of this would be the PC turning on but it keeps getting stuck on the logo screen or forgets the time and date anytime you unplug it.
+    It also can fail to recognize new hardware like CPUs or GPUs.
+      TROUBLESHOOTING:
 
 
 POWER AND BOOT DIAGNOSTICS
