@@ -6,7 +6,7 @@ You cannot fix a network if the machine itself won't turn on. Having built a str
 to focus entirely on the physical side of IT: diagnosing, troubleshooting, and repairing Physical Hardware.
 
 CORE INTERNAL COMPONENTS
-  CPU (Central Processing Unit): The CPU is one of the most integral pieces to the build and often has the same issues occur, typically involving: Heat, Power, and Contact.
+  1. CPU (Central Processing Unit): The CPU is one of the most integral pieces to the build and often has the same issues occur, typically involving: Heat, Power, and Contact.
 
     HEAT: Modern CPUs have safety measures built into them called 'Thermal Throttling' that intentionally slows it down to generate less heat after reaching a certain temperature 
     (Typically between 90-100 degrees Celsius or 194-212 degrees Farenheit). If the CPU hits its T-Junction limit, it will shut down automatically to avoid melting.
@@ -23,19 +23,32 @@ CORE INTERNAL COMPONENTS
       hardware death.
     
 
-  RAM (Random Access Memory): Troubleshooting RAM issues typically come by focusing on physical seating, memory corruption, compatibility and speed issues. RAM is often a culprit 
+  2. RAM (Random Access Memory): Troubleshooting RAM issues typically come by focusing on physical seating, memory corruption, compatibility and speed issues. RAM is often a culprit 
   in "ghost" issues that appear and disappear without warning.
+
     PHYSICAL CONNECTION: RAM sticks can slide out of their slots over time due to heat expansion or vibration which will cause POST to fail.
       TROUBLESHOOTING: RAM requires pressure in order to snap correctly into place. If it hasn't snapped into place it may be only making partial contact which can cause 
       intermittent crashes. Most motherboards have four slots. To run in "Dual-Channel" (for better performance), sticks usually need to be in slots 2 and 4 (or 1 and 3). Check the 
       motherboard manual; placing them side-by-side often causes stability issues. Sometimes the RAM is fine, but the motherboard slot is dead.
     
-    MEMORY CORRUPTION: Often 
+    MEMORY CORRUPTION: Oftem when a BSOD (Blue Screen Of Death) occurs on a computer, it may potentially be from internal chips failing within the RAM. These internal failures
+    are usually caused by static discharge (ESD) during installation or sometimes age will wear it down over time. Specific errors that will notify you of RAM issues will be
+    messages such as: 
+    -MEMORY_MANAGEMENT
+    -PAGE_FAULT_IN_NONPAGED_AREA
+    -CRITICAL_PROCESS_DIED
+      TROUBLESHOOTING: One can run Windows Memory Diagnostic and check for any errors that show up on the blue-screen test. If messages do appear, then the RAM is physically failing
+      and it'd be best to physically check if the RAM has any static/dust buildup. After removing the RAM you can clean it with 90% Isopropyl Alcohol.
+
+    COMPATABILITY AND SPEED ISSUES: Mixing and matching different RAM sticks can certainly work, the issue with is that all of the sticks of RAM will be forced to work at the same
+    speed as that of the slowest stick. This can cause the PC to refuse to bootup because the RAM sticks are fighting with each other about the speeds in which to operate.
+      TROUBLESHOOTING: If you just added new RAM and the PC won't boot, clear the CMOS (pull the battery for 30 seconds). This resets the RAM settings to "Auto" so it can try to find 
+      a stable speed for the new sticks.
     
 
-  STORAGE (SSD/HDD): 
+  3. STORAGE (SSD/HDD): 
 
-  MOTHERBOARD
+  4. MOTHERBOARD
 
 POWER AND BOOT DIAGNOSTICS
   POWER SUPPLY UNIT (PSU)
