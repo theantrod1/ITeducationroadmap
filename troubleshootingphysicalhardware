@@ -40,15 +40,44 @@ CORE INTERNAL COMPONENTS
       TROUBLESHOOTING: One can run Windows Memory Diagnostic and check for any errors that show up on the blue-screen test. If messages do appear, then the RAM is physically failing
       and it'd be best to physically check if the RAM has any static/dust buildup. After removing the RAM you can clean it with 90% Isopropyl Alcohol.
 
-    COMPATABILITY AND SPEED ISSUES: Mixing and matching different RAM sticks can certainly work, the issue with is that all of the sticks of RAM will be forced to work at the same
+    COMPATABILITY & SPEED ISSUES: Mixing and matching different RAM sticks can certainly work, the issue with is that all of the sticks of RAM will be forced to work at the same
     speed as that of the slowest stick. This can cause the PC to refuse to bootup because the RAM sticks are fighting with each other about the speeds in which to operate.
       TROUBLESHOOTING: If you just added new RAM and the PC won't boot, clear the CMOS (pull the battery for 30 seconds). This resets the RAM settings to "Auto" so it can try to find 
       a stable speed for the new sticks.
     
 
-  3. STORAGE (SSD/HDD): 
+  3. STORAGE (SSD/HDD): Typically storage will have issues with physical connectivity, mechanical degradation, and logical errors. 
+    
+    PHYSICAL CONNECTIVITY: You will know this is the issue if the driver doesn't appear at all in the BIOS/UEFI. You won't feel the HDD vibration, and for SSD the system will act
+    as though the slot is completely empty. 
+      TROUBLESHOOTING: Typically SATA (Serial Advanced Technology Attachment) cables fail more often than the drivers themselves so it's a good idea to check if something is wrong 
+      with this cable. Replace the SATA cable with a new one or try moving the power connector to a different plug to make sure it isn't a dead power issue.
 
-  4. MOTHERBOARD
+    MECHANICAL DEGRADATION: With HDD If you hear the "Click of Death" which is essentially just a rhythmic clicking/grinding noise stop using the system. With SSD the drive becomes
+    read only and only allows you to read files, not save anything new to the driver, or also it can just stop working during a large file write.
+      TROUBLESHOOTING: Use a utility like CrystalDiskInfo to read the drive's internal health report. Look for "Reallocated Sectors Count." If this number is high, the drive is 
+      physically dying. Hold the drive. If you feel a smooth hum, the motor is fine. If it’s jerking or silent, the mechanical components are seized. Check temperatures. If an NVMe 
+      SSD exceeds 70°C, it may disconnect itself to prevent heat damage. Ensure the thermal pad is making contact with the heatsink.
+
+    LOGICAL & FILE SYSTEM ERRORS: You know this is the issue when the driver shows up in the BIOS but Windows won't boot up. Anoher issue that may come up is errors such as "File
+    System Error" pop-ups or even a BSOD with a message saying: INACCESSIBLE_BOOT_DEVICE  
+      TROUBLESHOOTING: To fix this you can run the "chkdsk" command in which this forces Windows to find any "bad blocks" of data and mark them as 'unusuable' to potentially save
+      the rest of the data. You can also check the File System to see if the driver is missing, in which case you go to Disk Management and check if the drive is listed "Unallocated"
+      or "Foreign"; Chances are you just need to assign it to a drive letter. If the drive is healthy but won't boot up, you can use a Windows Recovery USB to run a Boot Record 
+      command to repair the software instructions that start the OS.
+
+
+  4. MOTHERBOARD: Symptoms of a motherboard not functioning properly can be things such as a PC being dead (not turning on any lights nor fans, etc.), the screen turns on but gets
+  stuck on the logo, or specific parts of the board stop working such as USB ports on the back, etc. These are caused by issues in Electrical/Physical Integrity, Firmware & Config.,
+  and Communication/Port Failure.
+
+    ELECTRICAL/PHYSICAL INTEGRITY: The symptoms of this would be that the PC is completely dead in that lights aren't working, random shut-offs occur, or a burnt plastic smell.
+      TROUBLESHOOTING: To see if this is realy the issue you can look at the motherboard to see if there are issues with any capacitors (bulging at the top, popped, leaking). If
+        there are any of these issues then the board is electrically unstable and the it must be replaced. Another factor that may cause issues is ensuring the motherboard is mounted 
+        on brass standoffs. If the back of the motherboard touches the metal computer case directly, it creates a "short circuit" that prevents the PC from turning on.
+
+    FIRMWARE & CONFIGURATION (BIOS/UEFI):  
+
 
 POWER AND BOOT DIAGNOSTICS
   POWER SUPPLY UNIT (PSU)
