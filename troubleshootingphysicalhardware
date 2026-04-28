@@ -90,7 +90,9 @@ CORE INTERNAL COMPONENTS
 
 
 POWER AND BOOT DIAGNOSTICS
-  1. POWER SUPPLY UNIT (PSU): 
+  1. POWER SUPPLY UNIT (PSU): Symptoms of this could look like the PC being completely unresponsive to anything. No lights, no fans, no clicks, etc.. Or you might see the PC turn on
+  but shut down or restart as soon as a heavy application loads up. You may also see certain parts of the PC (like a Hard Drive) shut off while everything else stays on.
+    
 
   2. POST (POWER ON SELF-TEST)
 
