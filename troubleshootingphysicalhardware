@@ -95,6 +95,7 @@ POWER AND BOOT DIAGNOSTICS
   are caused by things like Total Power Failure, Voltage Instability/"Dirty" Power, and Cable/Connection Integrity. 
 
     TOTAL POWER FAILURE: Nothing occurs. No lights, no fans, no clicking when hitting the power button.
+      TROUBLESHOOTING: 
     
 
   2. POST (POWER ON SELF-TEST)
