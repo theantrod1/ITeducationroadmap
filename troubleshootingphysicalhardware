@@ -78,20 +78,21 @@ CORE INTERNAL COMPONENTS
 
     FIRMWARE & CONFIGURATION (BIOS/UEFI): Symptoms of this would be the PC turning on but it keeps getting stuck on the logo screen or forgets the time and date anytime you unplug it.
     It also can fail to recognize new hardware like CPUs or GPUs.
-      TROUBLESHOOTING:
+      TROUBLESHOOTING: Reseting the CMOS (Complementary Metal-Oxide-Semiconductor) can fix some of these issues, so by removing it for 30 seconds, this resets the BIOS to factory
+      settings. If the system clock is always wrong or if BIOS settings won't save there's likely an issue with the battery.
 
 
 POWER AND BOOT DIAGNOSTICS
-  POWER SUPPLY UNIT (PSU)
+  1. POWER SUPPLY UNIT (PSU)
 
-  POST (POWER ON SELF-TEST)
+  2. POST (POWER ON SELF-TEST)
 
 EXTERNAL PORTS AND CABLES
-  VIDEO CONNECTIONS
+  1. VIDEO CONNECTIONS
 
-  PERIPHERAL PORTS
+  2. PERIPHERAL PORTS
 
-  NETWORK (RJ-45 ETHERNET PORT)
+  3. NETWORK (RJ-45 ETHERNET PORT)
 
 TECHNICIAN TOOLKIT AND SAFETY
-  ESD (ELECTROSTATIC DISCHARGE)
+  1. ESD (ELECTROSTATIC DISCHARGE)
