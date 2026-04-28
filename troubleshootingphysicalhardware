@@ -79,11 +79,18 @@ CORE INTERNAL COMPONENTS
     FIRMWARE & CONFIGURATION (BIOS/UEFI): Symptoms of this would be the PC turning on but it keeps getting stuck on the logo screen or forgets the time and date anytime you unplug it.
     It also can fail to recognize new hardware like CPUs or GPUs.
       TROUBLESHOOTING: Reseting the CMOS (Complementary Metal-Oxide-Semiconductor) can fix some of these issues, so by removing it for 30 seconds, this resets the BIOS to factory
-      settings. If the system clock is always wrong or if BIOS settings won't save there's likely an issue with the battery.
+      settings. If the system clock is always wrong or if BIOS settings won't save there's likely an issue with the battery so it would be just a matter of replacing. If you installed
+      a new CPU and but the baord doens't boot then the motherboard may need a firmware update to be able to properly commmunicate with the new chip.
+
+    COMMUNICATION/PORT FAILURE: This could look like USB ports not working, Ethernet port has no lights, or PC doesn't recognize RAM in slot 2.
+      TROUBLESHOOTING: Go into Windows Device Manager and check if there are any yellow exclamation points next to 'Universal Serial Bus Controllers' or 'Network adapters'. If there
+      are, then the physical chip on the motherboard may be failing or may just need a driver update. You can also look inside the USB/Ethernet ports to see if they have any pins bent
+      that are touching the metal casing, this can cause the entire motherboard to shutdown for safety. If a GPU or RAM stick isn't working, move it to a different slot on the same 
+      board. If it works in Slot B but not Slot A, the motherboard's internal "traces" (the tiny copper paths) for Slot A are likely damaged.
 
 
 POWER AND BOOT DIAGNOSTICS
-  1. POWER SUPPLY UNIT (PSU)
+  1. POWER SUPPLY UNIT (PSU): 
 
   2. POST (POWER ON SELF-TEST)
 
