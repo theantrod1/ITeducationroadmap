@@ -95,10 +95,15 @@ POWER AND BOOT DIAGNOSTICS
   are caused by things like Total Power Failure, Voltage Instability/"Dirty" Power, and Cable/Connection Integrity. 
 
     TOTAL POWER FAILURE: Nothing occurs. No lights, no fans, no clicking when hitting the power button.
+      TROUBLESHOOTING: Verify the physical rocker switch on the back of the PSU is set to "I" (On). Also, ensure the power cable is pushed all the way into the wall and the PSU.
+      Sometimes a motherboard "locks" itself after a power surge. Unplug the PSU from the wall for 60 seconds to let the capacitors fully drain, then try again.
+
+    VOLTAGE INSTABILITY/DIRTY POWER: This can look like the PC turning on but then shutting back off after loading a heavy game/app (indicating the GPU is pulling power). You may also
+    see flickering on your screen.
       TROUBLESHOOTING: 
     
+  2. POST (POWER ON SELF-TEST): 
 
-  2. POST (POWER ON SELF-TEST)
 
 EXTERNAL PORTS AND CABLES
   1. VIDEO CONNECTIONS
