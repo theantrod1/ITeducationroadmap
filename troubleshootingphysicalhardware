@@ -100,9 +100,19 @@ POWER AND BOOT DIAGNOSTICS
 
     VOLTAGE INSTABILITY/DIRTY POWER: This can look like the PC turning on but then shutting back off after loading a heavy game/app (indicating the GPU is pulling power). You may also
     see flickering on your screen.
-      TROUBLESHOOTING: 
-    
-  2. POST (POWER ON SELF-TEST): 
+      TROUBLESHOOTING: Set a multimeter to DC voltage. Check the 24-pin or PCIe connectors while the PC is running. You are looking for stable readings: +12V, +5V, and +3.3V. If the 12V 
+      rail is showing 11.2V, the PSU is failing. Listen for "coil whine" (a high-pitched squealing) or a grinding fan. Smell the exhaust; if you smell burnt ozone or "hot electronics," 
+      the internal capacitors are leaking or overheating.
+
+    CABLE/CONNECTION INTEGRITY: You might see this occur through "intermittent power" where the PC randomly shuts down or restarts. You may also see that specific parts of the randomly
+    start shutting off, such as Hard Drives.
+      TROUBLESHOOTING: PSUs often have multiple connectors on one cable. If one plug is dead, try a different one on the same string. NEVER mix cables from different PSU brands. The 
+      pinouts are different and will instantly fry your components.
+
+
+  2. POST (POWER ON SELF-TEST): you will be able to tell that there's an issue with the post if it starts giving you Beep Codes, Debug LEDs & Q-Codes, and No-Post Logic.
+
+    BEEP CODES: 
 
 
 EXTERNAL PORTS AND CABLES
