@@ -121,7 +121,10 @@ POWER AND BOOT DIAGNOSTICS
       A two-digit readout (00, A2, 55, etc.). You look these up in the manual. For example: "Code 00" often means the CPU is not detected or is dead.
 
     NO-POST LOGIC: PC turns on but stays stuck on manufacturer's logo. 
-      TROUBLESHOOTING:
+      TROUBLESHOOTING: A "hanging" POST is often caused by a faulty USB device. Unplug everything (mouse, keyboard, printers, webcams) and try to boot. If it boots, plug them back in one
+      by one to find the "shorted" device. If the POST is hanging because of a bad BIOS setting (like an unstable RAM speed), removing the CR2032 battery for 30 seconds will reset the "brain" a
+      nd allow it to try a fresh health check.
+
 
 
 EXTERNAL PORTS AND CABLES
