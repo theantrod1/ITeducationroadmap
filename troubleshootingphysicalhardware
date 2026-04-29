@@ -98,7 +98,7 @@ POWER AND BOOT DIAGNOSTICS
       TROUBLESHOOTING: Verify the physical rocker switch on the back of the PSU is set to "I" (On). Also, ensure the power cable is pushed all the way into the wall and the PSU.
       Sometimes a motherboard "locks" itself after a power surge. Unplug the PSU from the wall for 60 seconds to let the capacitors fully drain, then try again.
 
-    VOLTAGE INSTABILITY/DIRTY POWER: This can look like the PC turning on but then shutting back off after loading a heavy game/app (indicating the GPU is pulling power). You may also
+    VOLTAGE INSTABILITY/DIRTY POWER: This can look like the PC turning on but then shutting back off after  mom oading a heavy game/app (indicating the GPU is pulling power). You may also
     see flickering on your screen.
       TROUBLESHOOTING: Set a multimeter to DC voltage. Check the 24-pin or PCIe connectors while the PC is running. You are looking for stable readings: +12V, +5V, and +3.3V. If the 12V 
       rail is showing 11.2V, the PSU is failing. Listen for "coil whine" (a high-pitched squealing) or a grinding fan. Smell the exhaust; if you smell burnt ozone or "hot electronics," 
@@ -107,12 +107,21 @@ POWER AND BOOT DIAGNOSTICS
     CABLE/CONNECTION INTEGRITY: You might see this occur through "intermittent power" where the PC randomly shuts down or restarts. You may also see that specific parts of the randomly
     start shutting off, such as Hard Drives.
       TROUBLESHOOTING: PSUs often have multiple connectors on one cable. If one plug is dead, try a different one on the same string. NEVER mix cables from different PSU brands. The 
-      pinouts are different and will instantly fry your components.
+      pinouts are different and will instantly fry your components. 
 
 
   2. POST (POWER ON SELF-TEST): you will be able to tell that there's an issue with the post if it starts giving you Beep Codes, Debug LEDs & Q-Codes, and No-Post Logic.
 
-    BEEP CODES: 
+    BEEP CODES: The computer in this scenario will turn on, the fans turn on, but the screen stays black, and the motherboard starts beeping.
+      TROUBLESHOOTING: Listen to the sequence (1 long beep, 2 short beeps, etc.). Every motherboard manufacturer (Dell, HP, ASUS, Gigabyte) has a different "language." You must find 
+      the manual for that specific motherboard or PC model to translate the code.
+
+    DEBUG LEDS/Q-CODES: Modern mid-to-high-end motherboards have small lights or a two-digit digital display to tell you exactly where the boot process stopped.
+      TROUBLESHOOTING: Look for four tiny LEDs labeled CPU, DRAM, VGA, BOOT. If the "DRAM" light stays lit, POST failed at the RAM stage so know exactly where to start troubleshooting.
+      A two-digit readout (00, A2, 55, etc.). You look these up in the manual. For example: "Code 00" often means the CPU is not detected or is dead.
+
+    NO-POST LOGIC: PC turns on but stays stuck on manufacturer's logo. 
+      TROUBLESHOOTING:
 
 
 EXTERNAL PORTS AND CABLES
