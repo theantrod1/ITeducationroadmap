@@ -132,7 +132,11 @@ EXTERNAL PORTS AND CABLES
     ARTIFACTING: Seeing strange patterns, dots, or long "streaks" across the screen. This is often times a sign that the GPU's memory (VRAM) is overheating/dying.
       TROUBLESHOOTING: Use software like HWMonitor or MSI Afterburner to check GPU Temp and VRAM Temp. If VRAM is hitting 100°C+, the artifacts are caused by heat. If artifacts started 
       immediately after a driver update, use Device Manager to "Roll Back Driver" to the previous stable version.
-    
+
+    'NO SIGNAL' LOOP: The monitor turns on, searches for a signal, and then goes back to sleep, even though the PC fans are spinning.  
+      TROUBLESHOOTING: Ensure the cable is plugged into the horizontal ports on the Video Card, not the vertical ports on the Motherboard. Unplug the monitor from the power outlet for 30 
+      seconds. Monitors have their own internal logic boards that can occasionally "crash" and stop detecting inputs.
+
 
   2. PERIPHERAL PORTS
 
