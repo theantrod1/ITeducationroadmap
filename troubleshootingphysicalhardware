@@ -195,5 +195,6 @@ TECHNICIAN TOOLKIT AND SAFETY
       GHOST REBOOTING: The system restarts at random intervals with no error code, caused by damaged traces on the motherboard that "leak" electricity.
         TROUBLESHOOTING: Remove the motherboard from the case and place it on its cardboard box (Breadboarding). If the "ghost reboots" stop, the motherboard was likely "shorting out" 
         against the case. If the reboots continue even outside the case, the motherboard’s internal traces are permanently damaged and are "arcing" internally. Check Windows Logs > System. 
-        Look for Event ID 41 (Kernel-Power). If this happens without a "BugCheck Code" (all zeros), it means power was cut instantly at the hardware level—a classic sign of a "short" 
-        caused by ESD damage to the motherboard's power delivery system.
+        Look for Event ID 41 (Kernel-Power). If this happens without a "BugCheck Code" (all zeros), it means power was cut instantly at the hardware level, a classic sign of a "short" 
+        caused by ESD damage to the motherboard's power delivery system. ESD often damages the Motherboard or RAM first. Swap the RAM sticks one by one. If the ghost reboots persist with 
+        every stick of RAM, the "short" is almost certainly embedded in the motherboard itself.
