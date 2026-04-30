@@ -129,6 +129,7 @@ POWER AND BOOT DIAGNOSTICS
 
 EXTERNAL PORTS AND CABLES
   1. VIDEO CONNECTIONS: Common issues when it comes to video connections will be in Artifacting, "No Signal" Loop, or a BSOD.
+   
     ARTIFACTING: Seeing strange patterns, dots, or long "streaks" across the screen. This is often times a sign that the GPU's memory (VRAM) is overheating/dying.
       TROUBLESHOOTING: Use software like HWMonitor or MSI Afterburner to check GPU Temp and VRAM Temp. If VRAM is hitting 100°C+, the artifacts are caused by heat. If artifacts started 
       immediately after a driver update, use Device Manager to "Roll Back Driver" to the previous stable version.
@@ -142,11 +143,24 @@ EXTERNAL PORTS AND CABLES
       PSU to the GPU to ensure it gets enough "juice" during intense tasks.
 
 
-  2. PERIPHERAL PORTS
+  2. PERIPHERAL PORTS: Troubleshooting peripheral ports is often about distinguishing between a dead port, a power-hungry device, or a software driver glitch. In a Helpdesk role, you 
+  will find that "broken" ports are frequently just disabled or underpowered. You will often see things such as Front Porn Failures, "USB Not Recognized", and Intermittent Connection.
+
+      FRONT PORT FAILURES: Devices work when plugged into the back of the PC, but not the front.
+        TROUBLESHOOTING: Front ports use extension cables that lose voltage over distance. If a high-power device (like a mechanical keyboard with LEDs) won't work in the front but 
+        works in the back, the front ports are simply underpowered.
+
+      "USB NOT RECOGNIZED": Windows detects something is plugged in but cannot communicate with it.
+        TROUBLESHOOTING: Unplug the PC from the wall and hold the power button for 20 seconds. This clears the "static" in the USB controllers that often causes the software to lose 
+        track of what is plugged in.
+
+      INTERMITTENT CONNECTION: A device (like a webcam or external HDD) keeps disconnecting and reconnecting every few minutes.
+        TROUBLESHOOTING: Windows tries to save electricity by putting ports to "sleep." Go to Device Manager > USB Root Hub > Properties > Power Management. Uncheck "Allow the computer
+        to turn off this device to save power."
 
 
-
-  3. NETWORK (RJ-45 ETHERNET PORT)
+  3. NETWORK PORTS (RJ-45 ETHERNET PORT): 
+      
 
 TECHNICIAN TOOLKIT AND SAFETY
   1. ESD (ELECTROSTATIC DISCHARGE)
