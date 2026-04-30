@@ -143,8 +143,8 @@ EXTERNAL PORTS AND CABLES
       PSU to the GPU to ensure it gets enough "juice" during intense tasks.
 
 
-  2. PERIPHERAL PORTS: Troubleshooting peripheral ports is often about distinguishing between a dead port, a power-hungry device, or a software driver glitch. In a Helpdesk role, you 
-  will find that "broken" ports are frequently just disabled or underpowered. You will often see things such as Front Porn Failures, "USB Not Recognized", and Intermittent Connection.
+  2. PERIPHERAL PORTS: Troubleshooting peripheral ports is often about distinguishing between a dead port, a power-hungry device, or a software driver glitch. In a Helpdesk role, 
+  "broken" ports are frequently just disabled or underpowered. You will often see things such as Front Porn Failures, "USB Not Recognized", and Intermittent Connection.
 
       FRONT PORT FAILURES: Devices work when plugged into the back of the PC, but not the front.
         TROUBLESHOOTING: Front ports use extension cables that lose voltage over distance. If a high-power device (like a mechanical keyboard with LEDs) won't work in the front but 
@@ -159,7 +159,10 @@ EXTERNAL PORTS AND CABLES
         to turn off this device to save power."
 
 
-  3. NETWORK PORTS (RJ-45 ETHERNET PORT): 
+  3. NETWORK PORTS (RJ-45 ETHERNET PORT): When troubleshooting Ethernet, you are looking for the "Electrical Handshake." If the lights are off, the conversation hasn't even started.
+  You will be looking for issues such as "No Link" State, Slow Connectivity, Physical Port Damage.
+
+      "NO LINK" STATE: 
       
 
 TECHNICIAN TOOLKIT AND SAFETY
