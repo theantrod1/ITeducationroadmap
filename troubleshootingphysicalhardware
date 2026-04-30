@@ -162,8 +162,38 @@ EXTERNAL PORTS AND CABLES
   3. NETWORK PORTS (RJ-45 ETHERNET PORT): When troubleshooting Ethernet, you are looking for the "Electrical Handshake." If the lights are off, the conversation hasn't even started.
   You will be looking for issues such as "No Link" State, Slow Connectivity, Physical Port Damage.
 
-      "NO LINK" STATE: 
-      
+      "NO LINK" STATE: The cable is plugged in, but the PC says "Network Cable Unplugged" and the LEDs on the port are dark.
+        TROUBLESHOOTING: Swap the current cable with a Known-Good cable. If the lights come on, the original cable had an internal wire break. Look at the other end of the cable. If 
+        the port on the router/switch is also dark, try moving the cable to a different port on that device.
+
+      SLOW CONNECTIVITY: The PC connects, but speeds are capped (10Mbps instead of 1000Mbps), or the connection drops every time the cable is touched.
+        TROUBLESHOOTING: While the PC is on, gently wiggle the cable near the port. If the "Link Light" flickers or the PC says "Connected/Disconnected," the internal copper pins are 
+        not making firm contact. If the plastic clip is missing from the cable, it will sag. This slight misalignment causes "packet loss," which Windows interprets as a slow connection. 
+        Replace the cable immediately.
+
+      PHYSICAL PORT DAMAGE: The internal gold "fingers" (pins) inside the RJ-45 port are bent or the plastic locking mechanism is broken.
+        TROUBLESHOOTING: Use a flashlight to look inside the port. You should see 8 parallel gold pins. If two are touching (crossed), it causes a short circuit and the port will stay 
+        "Dead" to protect the motherboard. Do not attempt to repair the motherboard. Use a USB-to-Ethernet Adapter or install a PCIe Network Card. This is the standard "Helpdesk" fix 
+        for a dead integrated network port. Because of how they are positioned, RJ-45 ports are magnets for "dust bunnies." A single piece of lint blocking a gold pin will cause a 
+        "No Link" state. Use compressed air to blow out the port.
+
 
 TECHNICIAN TOOLKIT AND SAFETY
-  1. ESD (ELECTROSTATIC DISCHARGE)
+  1. ESD (ELECTROSTATIC DISCHARGE): Since ESD is a "silent killer," troubleshooting it is less about fixing a spark and more about process of elimination and failure analysis. Once a 
+  component is physically damaged by a high-voltage surge, it cannot be repaired—it must be replaced. Symptoms worth looking at are Dead on Arrival Issues, Degradation, and Ghost
+  Rebooting.
+
+      DOA (DEAD ON ARRIVAL): If you unbox a brand-new component, install it, and the PC won't boot, you likely "zapped" it during the unboxing without realizing it.
+        TROUBLESHOOTING: If a brand-new part (like a GPU) fails to boot, move it to a "Known-Good" system. If it still doesn't work in a second PC, the internal logic gates were likely 
+        fried by static during unboxing. Most manufacturers consider ESD a "user error," but it is indistinguishable from a factory defect. If a part is DOA, return it immediately under 
+        warranty.
+
+      DEGRADATION: The component works initially, but the PC becomes increasingly unstable over weeks or months, eventually failing completely.
+        TROUBLESHOOTING: f a component is "dying" due to ESD-weakened circuits, it will fail when it gets hot or under heavy load. Use tools like Prime95 (CPU) or MemTest86 (RAM).
+        If the test passes at first but starts throwing errors after 30 minutes, the damaged internal traces are "leaking" electrons as the material expands with heat.
+
+      GHOST REBOOTING: The system restarts at random intervals with no error code, caused by damaged traces on the motherboard that "leak" electricity.
+        TROUBLESHOOTING: Remove the motherboard from the case and place it on its cardboard box (Breadboarding). If the "ghost reboots" stop, the motherboard was likely "shorting out" 
+        against the case. If the reboots continue even outside the case, the motherboard’s internal traces are permanently damaged and are "arcing" internally. Check Windows Logs > System. 
+        Look for Event ID 41 (Kernel-Power). If this happens without a "BugCheck Code" (all zeros), it means power was cut instantly at the hardware level—a classic sign of a "short" 
+        caused by ESD damage to the motherboard's power delivery system.
