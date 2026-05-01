@@ -138,13 +138,13 @@ EXTERNAL PORTS AND CABLES
       TROUBLESHOOTING: Ensure the cable is plugged into the horizontal ports on the Video Card, not the vertical ports on the Motherboard. Unplug the monitor from the power outlet for 30 
       seconds. Monitors have their own internal logic boards that can occasionally "crash" and stop detecting inputs.
 
-    BSOD (Video TDR [Timeout Detection and Recovery] Failure): Windows waits for the GPU, ifit doens't respond within 2 seconds it restarts the driver which causes crashes.
+    BSOD (Video TDR [Timeout Detection and Recovery] Failure): Windows waits for the GPU, if it doens't respond within 2 seconds it restarts the driver which causes crashes.
       TROUBLESHOOTING: Make sure that the Power Supply is relaying enough power to the GPU. Ensure the PCIe power cables (6+2 pin) are not daisy-chained. Use two separate cables from the 
       PSU to the GPU to ensure it gets enough "juice" during intense tasks.
 
 
   2. PERIPHERAL PORTS: Troubleshooting peripheral ports is often about distinguishing between a dead port, a power-hungry device, or a software driver glitch. In a Helpdesk role, 
-  "broken" ports are frequently just disabled or underpowered. You will often see things such as Front Porn Failures, "USB Not Recognized", and Intermittent Connection.
+  "broken" ports are frequently just disabled or underpowered. You will often see things such as Front Port Failures, "USB Not Recognized", and Intermittent Connection.
 
       FRONT PORT FAILURES: Devices work when plugged into the back of the PC, but not the front.
         TROUBLESHOOTING: Front ports use extension cables that lose voltage over distance. If a high-power device (like a mechanical keyboard with LEDs) won't work in the front but 
