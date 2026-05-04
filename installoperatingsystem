@@ -25,7 +25,23 @@ BIOS/UEFI CONFIGURATION
   UEFI vs. BIOS (LEGACY): BIOS is the old 1980s-era standard. UEFI is the modern replacement. UEFI allows for faster boot times, supports larger hard drives, and provides a graphical 
   mouse-driven interface. Most modern OSs require UEFI.
 
+  SECURE BOOT: This is a feature of UEFI that ensures only software with a "digital signature" from a trusted provider (like Microsoft) can run at startup. It prevents rootkits (stealthy 
+  malware) from hijacking the boot process before the antivirus even loads.
 
-DISK MANAGEMENT/PARTITIONING:
+  TPM 2.0: Trusted Platform Module is a dedicated security chip (or firmware) on the motherboard that handles encryption keys. Windows 11 uses this to power features like BitLocker. 
+  If TPM is disabled in BIOS, Windows 11 will refuse to install.
+
+DISK MANAGEMENT/PARTITIONING
+  FILE SYSTEMS (NTFS vs. FAT32): NTFS   (New Technology File System) is the Windows standard because it supports massive file sizes and security permissions. FAT32 is an older format used 
+  for USB sticks; it is highly compatible but cannot hold a single file larger than 4GB.  
+
+  PARTITION TYPES (GPT vs. MBR): This is the "blueprint" for the drive. MBR is old and limited to 4 partitions and 2TB drives. GPT (GUID Partition Table) is the modern requirement for 
+  UEFI and Windows 11, supporting nearly unlimited partitions and massive drive sizes.
+
+  UNALLOCATED SPACE: This is a drive that has no partitions—no "Drive C:" or "Drive D:". In a "Clean Install," you delete all existing partitions until the drive is 100% Unallocated 
+  Space, ensuring no old data or viruses interfere with the new OS.
+
+  SYSTEM RESERVED PARTITIONS: When you install Windows, it creates tiny "hidden" slices (usually 100MB–500MB). One is the EFI System Partition (the "starter motor" for the OS) and the 
+  other is the Recovery Environment. If you delete these, Windows will fail to boot.
 
 POST-INSTALLATION: 
