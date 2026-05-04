@@ -5,7 +5,15 @@ May 3, 2026
 With the physical hardware diagnosed and the network foundation set, it is time to actually bring the machine to life. This log covers the step-by-step fundamentals 
 of Operating System installation and initial configuration.
 
-MEDIA PREPARATION:
+MEDIA PREPARATION
+  INSTALLATION MEDIA: A USB is typically just a storage device. However, by altering it's MBR (Master Boot Record) or GUID Partition Table (GPT) you can actually turn it into a 
+  bootable hard drive. Tools like the Media Control Tool (MCT) will do this automatically. A tool like Rufus will allow you to customize the settings.
+
+  ARCHITECTURE: This is referring to the instruction set of the CPU. x64 being the the 64-bit standard for Intel and AMD processors found in most desktops. ARM (Advanced RISC Machine)
+  is used for high-efficiency chips (like the Snapdragon in some laptops or Apple’s M-series). You cannot run x64 Windows on an ARM chip without specific emulation, and vice versa.
+
+  ISO: Think of an ISO as a "digital clone" of a physical DVD. It contains every file and the exact sector-by-sector layout of the installer.
+
 
 
 BIOS/UEFI CONFIGURATION:
