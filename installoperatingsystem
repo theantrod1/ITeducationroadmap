@@ -31,8 +31,9 @@ BIOS/UEFI CONFIGURATION
   TPM 2.0: Trusted Platform Module is a dedicated security chip (or firmware) on the motherboard that handles encryption keys. Windows 11 uses this to power features like BitLocker. 
   If TPM is disabled in BIOS, Windows 11 will refuse to install.
 
+
 DISK MANAGEMENT/PARTITIONING
-  FILE SYSTEMS (NTFS vs. FAT32): NTFS   (New Technology File System) is the Windows standard because it supports massive file sizes and security permissions. FAT32 is an older format used 
+  FILE SYSTEMS (NTFS vs. FAT32): NTFS (New Technology File System) is the Windows standard because it supports massive file sizes and security permissions. FAT32 is an older format used 
   for USB sticks; it is highly compatible but cannot hold a single file larger than 4GB.  
 
   PARTITION TYPES (GPT vs. MBR): This is the "blueprint" for the drive. MBR is old and limited to 4 partitions and 2TB drives. GPT (GUID Partition Table) is the modern requirement for 
@@ -44,4 +45,15 @@ DISK MANAGEMENT/PARTITIONING
   SYSTEM RESERVED PARTITIONS: When you install Windows, it creates tiny "hidden" slices (usually 100MB–500MB). One is the EFI System Partition (the "starter motor" for the OS) and the 
   other is the Recovery Environment. If you delete these, Windows will fail to boot.
 
+
 POST-INSTALLATION: 
+  DRIVERS: Even if Windows is running, the hardware might be "blind." A Driver is a translator. For example, without a Chipset Driver, the motherboard can't manage power correctly; 
+  without a NIC Driver, you can't connect to the internet.
+
+  UPDATES: The version of Windows on your USB is likely months old. Running Windows Update immediately is critical to patch "Zero Day" security vulnerabilities that have been 
+  discovered since that installer was made.
+
+  ACTIVATION: This connects your hardware to a license. In a home setting, this is a Product Key. In a corporate setting, this often happens automatically via a Digital License 
+  tied to the motherboard's ID in the cloud.
+
+  OOBE (OUT OF BOX EXPERIENCE): This is the "Hi there" blue screen phase. Here you set the Regional Settings (Time/Date), create the User Account, and choose Privacy Settings.
