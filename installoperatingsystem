@@ -14,9 +14,17 @@ MEDIA PREPARATION
 
   ISO: Think of an ISO as a "digital clone" of a physical DVD. It contains every file and the exact sector-by-sector layout of the installer.
 
+  SPECS: Before starting, verify the hardware. Windows 11, for example, requires at least 4GB of RAM, 64GB of storage, and a compatible 1GHz 64-bit processor. If the hardware is 
+  too old, the installer will throw a "This PC cannot run Windows" error.
 
 
-BIOS/UEFI CONFIGURATION:
+BIOS/UEFI CONFIGURATION
+  BOOT PRIORITY: By default, a PC looks at the internal SSD for an OS. To install a new one, you must interrupt the boot (usually by tapping F2, F12, or DEL) and move the USB Flash 
+  Drive to the #1 spot in the Boot Order.
+
+  UEFI vs. BIOS (LEGACY): BIOS is the old 1980s-era standard. UEFI is the modern replacement. UEFI allows for faster boot times, supports larger hard drives, and provides a graphical 
+  mouse-driven interface. Most modern OSs require UEFI.
+
 
 DISK MANAGEMENT/PARTITIONING:
 
