@@ -57,3 +57,13 @@ POST-INSTALLATION:
   tied to the motherboard's ID in the cloud.
 
   OOBE (OUT OF BOX EXPERIENCE): This is the "Hi there" blue screen phase. Here you set the Regional Settings (Time/Date), create the User Account, and choose Privacy Settings.
+
+
+PXE (Preboot Execution Environment)- An industry standard client-server interface that allows a computer to boot and install an operating system over a network connection (Ethernet) 
+without the need for physical media like a USB or hard drive.
+
+SWAP- A dedicated space on the storage drive used as Virtual RAM. It prevents system failure during high memory usage and is required for hibernation. Traditionally, Swap is sized 
+at 2x the amount of physical RAM, though on modern systems with 16GB+ of RAM, a smaller Swap (2GB–4GB) is usually sufficient.
+
+SYSPREP- The main goal of Sysprep is to remove system-specific data from a Windows installation. This allows you to take a "snapshot" (Golden Image) of a configured PC and deploy it
+to hundreds of other machines without errors.
