@@ -67,3 +67,6 @@ at 2x the amount of physical RAM, though on modern systems with 16GB+ of RAM, a 
 
 SYSPREP- The main goal of Sysprep is to remove system-specific data from a Windows installation. This allows you to take a "snapshot" (Golden Image) of a configured PC and deploy it
 to hundreds of other machines without errors.
+
+FORMATTING- The process of initializing a partition with a specific File System (NTFS, FAT32, EXT4). It creates the internal structure (Master File Table) required for the OS to store 
+and retrieve data. A "Quick Format" resets the file table, while a "Full Format" also checks the physical disk for errors.
